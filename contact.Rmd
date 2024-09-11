@@ -10,7 +10,9 @@ title: "Contact"
 
 **Tara Pozzi**
 <i class="fa fa-envelope-square" aria-hidden="true"></i> [email](mailto:tbpozzi@ucdavis.edu)
+
 Drop-in working session (in person): Tuesdays
+
 Davis R User's Group: Thursdays 10 - 12 am (Shields 360) 
 
 **Elise Zufall**

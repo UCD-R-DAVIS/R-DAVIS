@@ -62,7 +62,7 @@ For our purposes the "*best practice*" (i.e., **easier**) for setting up a new g
 
 You should now have a repository on Github. Our class is all housed in the [ucd-r-davis](https://github.com/ucd-r-davis) Organization, so your repository should appear there, and it should look something like this:
 
-  - [`https://github.com/ucd-r-davis/r-davis-in-class-project-YourGithubUsername`](https://github.com/ucd-r-davis/r-davis-in-class-project-liza-wood). 
+  - [`https://github.com/ucd-r-davis/r-davis-in-class-project-YourGithubUsername`](https://github.com/ucd-r-davis/r-davis-in-class-project-tara-pozzi). 
   - **To _`clone`_ your repository** (i.e. copy to your computer):
       - We're going to stick with using **`SSH`:** link for now. If you successfully used HTTPS, congrats -- you can leave it that way. But if you're on the SSH train, look for the big green "*Code*" button. Make sure you select the "**Use SSH**" link
       - Copy that link (should be something like *`git@github.com:ucd-r-davis/r-davis-in-class-project-YourGithubUsername.git`*).
@@ -84,7 +84,7 @@ Now we'll create an RStudio Project and link our Github repository (following [*
 
 <br>
 
-For the rest of this class, **everything** we do will be in the R-DAVIS-2022 folder on your Desktop. For the rest of your life, however, you can put GitHub repositories anywhere on your computer, but it's really useful to keep them well organized. A common way to do this would be a folder under your username called "GitHub_Projects" or something like that.
+For the rest of this class, **everything** we do will be in the R-DAVIS-2024 folder on your Desktop. For the rest of your life, however, you can put GitHub repositories anywhere on your computer, but it's really useful to keep them well organized. A common way to do this would be a folder under your username called "GitHub_Projects" or something like that.
 
 Another critical thing with git and GitHub is that you should **never** nest projects inside of projects. Treat each RProject/git repository as a completely separate entity, containing only the stuff pertaining to that project. If you try to put a folder that's an RProject inside another folder that's an RProject, stuff is gonna go wrong. Just keep them all separate, but ideally contained in some other folder, like "GitHub_Projects", which is NOT a GitHub repository or RProject, just a boring regular folder.
 
