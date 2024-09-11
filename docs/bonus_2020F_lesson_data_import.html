@@ -439,7 +439,7 @@ div.tocify {
   </a>
 </li>
 <li>
-  <a href="https://github.com/gge-ucd/R-DAVIS">
+  <a href="https://github.com/UCD-R-DAVIS/R-DAVIS">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -515,7 +515,7 @@ and <code>read_csv</code></p>
 
 surveys_underscore &lt;- read_csv(&quot;data/combined.csv&quot;)</code></pre>
 <pre><code>## Rows: 34786 Columns: 13
-## ── Column specification ────────────────────────
+## ── Column specification ─────────────────────────────────────────────────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr (6): species_id, sex, genus, species, taxa, plot_type
 ## dbl (7): record_id, month, day, year, plot_id, hindfoot_length, weight
@@ -733,8 +733,10 @@ different specialized packages. It can streamline your data
 import/export and give you more consistent data frames when you’re
 working with lots of different file types.</p>
 <pre class="r"><code>#install.packages(&quot;rio&quot;)
-library(rio)
-export(mtcars, &quot;data/mtcars.csv&quot;)
+library(rio)</code></pre>
+<pre><code>## The following rio suggested packages are not installed: &#39;arrow&#39;, &#39;hexView&#39;, &#39;fst&#39;, &#39;pzfx&#39;, &#39;rmatio&#39;, &#39;readODS&#39;, &#39;qs&#39;
+## Use &#39;install_formats()&#39; to install them</code></pre>
+<pre class="r"><code>export(mtcars, &quot;data/mtcars.csv&quot;)
 export(mtcars, &quot;data/mtcars.rds&quot;)
 export(mtcars, &quot;data/mtcars.tsv&quot;)</code></pre>
 <p>You can read more about <code>rio</code> on its <a

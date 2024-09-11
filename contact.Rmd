@@ -8,14 +8,13 @@ title: "Contact"
 **Tyler Scott**
 <i class="fa fa-envelope-square" aria-hidden="true"></i> [email](mailto:tascott@ucdavis.edu)  
 
-
-**Liza Wood**
-<i class="fa fa-envelope-square" aria-hidden="true"></i> [email](mailto:belwood@ucdavis.edu)  
-Drop-in working session (in person): Tuesday 
-
-
 **Tara Pozzi**
-<i class="fa fa-envelope-square" aria-hidden="true"></i> [email](mailto:)  
+<i class="fa fa-envelope-square" aria-hidden="true"></i> [email](mailto:tbpozzi@ucdavis.edu)
+Drop-in working session (in person): Tuesdays
+Davis R User's Group: Thursdays 10 - 12 am (Shields 360) 
+
+**Elise Zufall**
+<i class="fa fa-envelope-square" aria-hidden="true"></i> [email](mailto:ezufall@ucdavis.edu)  
 
 
 ## Course Creators/Former Instructors  
@@ -52,6 +51,9 @@ Drop-in working session (in person): Tuesday
 [<i class="fa fa-github-square" aria-hidden="true"></i> mikoontz](https://github.com/mikoontz)  
 [<i class="ai ai-orcid-square"></i> orcid.org/0000-0002-8276-210X](https://orcid.org/0000-0002-8276-210X)  
 
+**Liza Wood** 
+<i class="fa fa-envelope-square" aria-hidden="true"></i> [email](mailto:L.Wood3@exeter.ac.uk)  
+[<i class="fa fa-globe" aria-hidden="true"></i> website](https://liza-wood.github.io/)  
 
 ## Former Teaching Assistants/Classroom Helpers
 

@@ -40,42 +40,39 @@ To get the most out of in-class time together, R-DAVIS will combine video materi
 
 ## Schedule  
 
-**NOTICE:** The R-DAVIS course is no longer being hosted on this page -- it has been moved to https://ucd-cepb.github.io/R-DAVIS/. The contents of this page will remain active, including information for the last time it was offered on this site: Fall 2022.  
-
-
-#### Week 1 (Sept. 22)
+#### Week 1 (Sept. 26)
 - Course intro
 - Intro to git/GitHub and RStudio
 
-#### Week 2 (Sept. 29)
+#### Week 2 (Oct. 3)
 - Project management
 - How R thinks about data
  
-#### Week 3 (Oct. 6)
+#### Week 3 (Oct. 10)
 - Spreadsheet best practices
 - Starting with spreadsheets in R
 
-#### Week 4 (Oct. 13)
+#### Week 4 (Oct. 17)
 - Data manipulation in the tidyverse, part 1
 
-#### Week 5 (Oct. 20)
+#### Week 5 (Oct. 24)
 - Data manipulation in the tidyverse, part 2
 
-#### Week 6 (Oct. 27)
+#### Week 6 (Oct. 31)
 - Data visualization, part 1
 
-#### Week 7 (Nov. 3)
+#### Week 7 (Nov. 7)
 - Data visualization, part 2  
 
-#### Week 8 (Nov. 10) 
+#### Week 8 (Nov. 14) 
 - Date-time data with `lubridate`
 - Writing functions
 
-#### Week 9 (Nov. 17)
+#### Week 9 (Nov. 21)
 - Iteration 
 
-#### Week 10 Thanksgiving holiday (Nov. 24)   
+#### Thanksgiving holiday (Nov. 28)   
 
-#### Week 11 (Dec. 1)
+#### Week 10 (Dec. 5)
 - TBD  
 

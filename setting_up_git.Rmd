@@ -10,7 +10,7 @@ Once we've setup R/RStudio, and installed git, the next step is seeing whether w
 
 - registered for your free Github account
 - installed **R**, **RStudio**, and **git**
-- Filled out our google form and accepted your invitation to the repository in our [`GGE-R-DAVIS` group](https://github.com/gge-ucd)
+- Filled out our google form and accepted your invitation to the repository in our [`UCD-R-DAVIS` group](https://github.com/ucd-r-davis)
 </div>
 
 <br>
@@ -55,17 +55,17 @@ For our purposes the "*best practice*" (i.e., **easier**) for setting up a new g
 
  - Typically, the preferred method is to create a new repository on Github...**HOWEVER**:
  - For this class we've already created a repository for you, and you will get a Github Classroom link via email. When you click the link, Github creates a new repository for you, which our class will be able to view and work with.
- - When you use the Github Classroom link, a repository will be created that looks like "gge-ucd/r-davis-in-class-project-YourGithubUsername"
+ - When you use the Github Classroom link, a repository will be created that looks like "ucd-r-davis/r-davis-in-class-project-YourGithubUsername"
 
 
 ### 2. Clone your repository to your computer
 
-You should now have a repository on Github. Our class is all housed in the [gge-ucd](https://github.com/gge-ucd) Organization, so your repository should appear there, and it should look something like this:
+You should now have a repository on Github. Our class is all housed in the [ucd-r-davis](https://github.com/ucd-r-davis) Organization, so your repository should appear there, and it should look something like this:
 
-  - [`https://github.com/gge-ucd/r-davis-in-class-project-YourGithubUsername`](https://github.com/gge-ucd/r-davis-in-class-project-liza-wood). 
+  - [`https://github.com/ucd-r-davis/r-davis-in-class-project-YourGithubUsername`](https://github.com/ucd-r-davis/r-davis-in-class-project-liza-wood). 
   - **To _`clone`_ your repository** (i.e. copy to your computer):
       - We're going to stick with using **`SSH`:** link for now. If you successfully used HTTPS, congrats -- you can leave it that way. But if you're on the SSH train, look for the big green "*Code*" button. Make sure you select the "**Use SSH**" link
-      - Copy that link (should be something like *`git@github.com:gge-ucd/r-davis-in-class-project-YourGithubUsername.git`*).
+      - Copy that link (should be something like *`git@github.com:ucd-r-davis/r-davis-in-class-project-YourGithubUsername.git`*).
  
 ![](img/clone_button.png)
 
@@ -78,7 +78,7 @@ Now we'll create an RStudio Project and link our Github repository (following [*
   - In RStudio, start a new Project: `File > New Project > Version Control > Git`. 
   
 
-  - In the “**Repository URL**” paste the URL of your new GitHub repository. If you hit **`Tab`**, the *Project directory name* will automatically populate with the exact name of the repository. This is generally preferred so you can keep track of things more easily. You should put this project into a subdirectory, which will be **Desktop/R-DAVIS-2022** for this class. You should make a folder on your desktop called **R-DAVIS-2022** spelled **EXACTLY** like that, and put your new GitHub repository into that folder. It should look like this:
+  - In the “**Repository URL**” paste the URL of your new GitHub repository. If you hit **`Tab`**, the *Project directory name* will automatically populate with the exact name of the repository. This is generally preferred so you can keep track of things more easily. You should put this project into a subdirectory, which will be **Desktop/R-DAVIS-2024** for this class. You should make a folder on your desktop called **R-DAVIS-2024** spelled **EXACTLY** like that, and put your new GitHub repository into that folder. It should look like this:
   
 ![](img/rstudio_git_repo_setup.png)
 
