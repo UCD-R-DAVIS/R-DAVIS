@@ -60,12 +60,12 @@ For our purposes the "*best practice*" (i.e., **easier**) for setting up a new g
 
 ### 2. Clone your repository to your computer
 
-You should now have a repository on Github. Our class is all housed in the [ucd-r-davis](https://github.com/ucd-r-davis) Organization, so your repository should appear there, and it should look something like this:
+You should now have a repository on Github. Our class is all housed in the [UCD-R-DAVIS](https://github.com/ucd-r-davis) Organization, so your repository should appear there, and it should look something like this:
 
-  - [`https://github.com/ucd-r-davis/r-davis-in-class-project-YourGithubUsername`](https://github.com/ucd-r-davis/r-davis-in-class-project-tara-pozzi). 
+  - [`https://github.com/UCD-R-DAVIS/R_DAVIS_in_class_project_YourGithubUsername`](https://github.com/UCD-R-DAVIS/R_DAVIS_in_class_project_tara-pozzi). 
   - **To _`clone`_ your repository** (i.e. copy to your computer):
       - We're going to stick with using **`SSH`:** link for now. If you successfully used HTTPS, congrats -- you can leave it that way. But if you're on the SSH train, look for the big green "*Code*" button. Make sure you select the "**Use SSH**" link
-      - Copy that link (should be something like *`git@github.com:ucd-r-davis/r-davis-in-class-project-YourGithubUsername.git`*).
+      - Copy that link (should be something like *`git@github.com:UCD-R-DAVIS/R_DAVIS_in_class_project_YourGithubUsername.git`*).
  
 ![](img/clone_button.png)
 
@@ -78,7 +78,7 @@ Now we'll create an RStudio Project and link our Github repository (following [*
   - In RStudio, start a new Project: `File > New Project > Version Control > Git`. 
   
 
-  - In the “**Repository URL**” paste the URL of your new GitHub repository. If you hit **`Tab`**, the *Project directory name* will automatically populate with the exact name of the repository. This is generally preferred so you can keep track of things more easily. You should put this project into a subdirectory, which will be **Desktop/R-DAVIS-2024** for this class. You should make a folder on your desktop called **R-DAVIS-2024** spelled **EXACTLY** like that, and put your new GitHub repository into that folder. It should look like this:
+  - In the “**Repository URL**” paste the URL of your new GitHub repository. If you hit **`Tab`**, the *Project directory name* will automatically populate with the exact name of the repository. This is generally preferred so you can keep track of things more easily. You should put this project into a subdirectory, which will be **Desktop/R_DAVIS_2024** for this class. You should make a folder on your desktop called **R_DAVIS_2024** spelled **EXACTLY** like that, and put your new GitHub repository into that folder. It should look like this:
   
 ![](img/rstudio_git_repo_setup.png)
 
@@ -115,7 +115,7 @@ We'll go over this part in class. If you successfully created your RStudio proje
 
 #### Edit README
 
-In RStudio, open your new project (`r-davis-in-class-project-YourGithubUsername`). Navigate to the *Files* tab and open the `README.md` file. You can click on it in the window and it will automatically open up.
+In RStudio, open your new project (`R_DAVIS_in_class_project_YourGithubUsername`). Navigate to the *Files* tab and open the `README.md` file. You can click on it in the window and it will automatically open up.
 
   - **Edit your README by adding in the following:**
     - Name
