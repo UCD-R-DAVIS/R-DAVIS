@@ -733,12 +733,10 @@ different specialized packages. It can streamline your data
 import/export and give you more consistent data frames when you’re
 working with lots of different file types.</p>
 <pre class="r"><code>#install.packages(&quot;rio&quot;)
-library(rio)</code></pre>
-<pre><code>## The following rio suggested packages are not installed: &#39;arrow&#39;, &#39;hexView&#39;, &#39;fst&#39;, &#39;pzfx&#39;, &#39;rmatio&#39;, &#39;readODS&#39;, &#39;qs&#39;
-## Use &#39;install_formats()&#39; to install them</code></pre>
-<pre class="r"><code>export(mtcars, &quot;data/mtcars.csv&quot;)
-export(mtcars, &quot;data/mtcars.rds&quot;)
-export(mtcars, &quot;data/mtcars.tsv&quot;)</code></pre>
+library(rio)
+#export(mtcars, &quot;data/mtcars.csv&quot;)
+#export(mtcars, &quot;data/mtcars.rds&quot;)
+#export(mtcars, &quot;data/mtcars.tsv&quot;)</code></pre>
 <p>You can read more about <code>rio</code> on its <a
 href="https://github.com/leeper/rio">Github page</a>.</p>
 <p><br></p>

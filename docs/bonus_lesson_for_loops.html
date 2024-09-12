@@ -551,11 +551,6 @@ of the alphabet by using the <code>letters</code> vector</p>
 <h1>Example with gapminder</h1>
 <pre class="r"><code>library(tidyverse)
 library(gapminder)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;gapminder&#39;</code></pre>
-<pre><code>## The following object is masked _by_ &#39;.GlobalEnv&#39;:
-## 
-##     gapminder</code></pre>
 <pre class="r"><code>plotPopGrowth &lt;- function(countryToPlot, theData = gapminder) {
   # this filters data to a specific country
   oneCountry &lt;- theData %&gt;%

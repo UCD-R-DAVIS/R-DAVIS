@@ -233,9 +233,9 @@ One other data import/export package to check out is called `rio`. It uses two m
 ```{r}
 #install.packages("rio")
 library(rio)
-export(mtcars, "data/mtcars.csv")
-export(mtcars, "data/mtcars.rds")
-export(mtcars, "data/mtcars.tsv")
+#export(mtcars, "data/mtcars.csv")
+#export(mtcars, "data/mtcars.rds")
+#export(mtcars, "data/mtcars.tsv")
 ```
 
 You can read more about `rio` on its [Github page](https://github.com/leeper/rio).
