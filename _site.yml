@@ -14,7 +14,7 @@ navbar:
       href: computer_setup.html
     - text: Setting up Git Repository
       href: setting_up_git.html
-  - text: Course Materials
+  - text: Tutorials
     icon: fa-book  fa-1x
     menu:
     - text: Intro to Programming, R, & RStudio
@@ -43,7 +43,7 @@ navbar:
       href: lesson_14_iteration.html
     - text: Literate Programming with RMarkdown
       href: lesson_rmarkdown.html
-  - text: Lectures
+  - text: Videos
     icon: fa-slideshare fa-1x
     href: lectures.html
   - text: Assignments

@@ -11,7 +11,7 @@
 
 
 
-<title>RStudio and Git</title>
+<title>Automation with for loops</title>
 
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -461,241 +461,152 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">RStudio and Git</h1>
+<h1 class="title toc-ignore">Automation with for loops</h1>
 
 </div>
 
 
-<p>Once we’ve setup R/RStudio, and installed git, the next step is
-seeing whether we can connect RStudio with Git. Please try this at home
-before class, and then we’ll go through it when we meet.</p>
-<br>
-<div class="blue">
-<p><strong>This lesson assumes you have:</strong></p>
+<blockquote>
+<h2 id="learning-objectives">Learning objectives</h2>
 <ul>
-<li>registered for your free Github account</li>
-<li>installed <strong>R</strong>, <strong>RStudio</strong>, and
-<strong>git</strong></li>
-<li>Filled out our google form and accepted your invitation to the
-repository in our <a
-href="https://github.com/ucd-r-davis"><code>UCD-R-DAVIS</code>
-group</a></li>
+<li>Understand the anatomy of a for loop</li>
+<li>Understand the iterative looping variable</li>
+<li>Be able to build a for loop to automate a block of code</li>
 </ul>
+</blockquote>
+<div id="background" class="section level1">
+<h1>Background</h1>
+<p>We can automate chunks of code using a <code>for</code> loop. We’ve
+seen how many tasks are automatically automated using vectorization.
+Remember how we can often pass a vector of values as an argument to a
+function, and the function will happily operate on each element in
+turn.</p>
+<pre class="r"><code>x &lt;- c(1, 4, 98, 2)
+log(x)</code></pre>
+<pre><code>## [1] 0.0000000 1.3862944 4.5849675 0.6931472</code></pre>
+<p>R understands that we want to call the <code>log()</code> function on
+the first element in the <code>x</code> vector, then call the
+<code>log()</code> function on the second element in the <code>x</code>
+vector, and so on.</p>
+<p>Sometimes vectorization can’t help us automate a set of commands.
+This can happen when commands are particularly complex, when the
+commands are using multiple objects at once, or when the next iteration
+of the block of code relies on the result of the previous iteration of
+the block of code. In these cases, we can tell R exactly what commands
+we want repeated inside of a loop.</p>
+<p>Here is what a basic for loop looks like.</p>
+<pre class="r"><code>for(i in 1:10) {
+  print(i)
+}</code></pre>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10</code></pre>
+<p>We use the <code>for()</code> function to indicate we are starting a
+loop. The <code>{</code> and <code>}</code> mark the start and end of
+the block of code that we will repeat over and over.
+<code>i in 1:10</code> means that <code>i</code> will take on the first
+value in the <code>1:10</code> vector, the block of code will execute,
+then <code>i</code> will take on the second value in the
+<code>1:10</code> vector, the block of code will execute a second time,
+and so on until <code>i</code> takes on the last value in the
+<code>1:10</code> vector, the block of code executes one final time, and
+then the loop is finished. R will now proceed to the next line of code
+after the <code>}</code>. We can call this <strong>iterative looping
+variable</strong> whatever we’d like. Often, it is called <code>i</code>
+(or <code>j</code> or <code>k</code> if <code>i</code> is already used),
+but it could be called <code>monkey</code> and R would be fine with
+that.</p>
+<p>It’s key to notice that the value of <code>i</code> changes each time
+the code block in the loop executes. We say that <code>i</code> is
+<em>iterating</em> through the values of the vector. We can use
+<code>i</code> (or whatever you’ve called it) inside the for loop code
+chunk. Above, we printed out the value of <code>i</code> (see how
+<code>i</code> changed?) Below, we print out the <code>i</code>th letter
+of the alphabet by using the <code>letters</code> vector</p>
+<pre class="r"><code>letters # all the letters in the alphabet</code></pre>
+<pre><code>##  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot; &quot;k&quot; &quot;l&quot; &quot;m&quot; &quot;n&quot; &quot;o&quot; &quot;p&quot; &quot;q&quot; &quot;r&quot; &quot;s&quot; &quot;t&quot; &quot;u&quot; &quot;v&quot; &quot;w&quot; &quot;x&quot; &quot;y&quot; &quot;z&quot;</code></pre>
+<pre class="r"><code>for(i in 1:10) {
+  # use square bracket notation to access the ith element in the letters vector
+  print(letters[i]) 
+}</code></pre>
+<pre><code>## [1] &quot;a&quot;
+## [1] &quot;b&quot;
+## [1] &quot;c&quot;
+## [1] &quot;d&quot;
+## [1] &quot;e&quot;
+## [1] &quot;f&quot;
+## [1] &quot;g&quot;
+## [1] &quot;h&quot;
+## [1] &quot;i&quot;
+## [1] &quot;j&quot;</code></pre>
 </div>
-<p><br> This lesson is to demonstrate the basics of using git with
-RStudio, and should provide a basic understanding of why we want to use
-version control where possible.</p>
-<p><br></p>
-<div id="introduction-to-version-control" class="section level2">
-<h2>Introduction to Version Control</h2>
-<p>At some point many of us have probably had files in a directory that
-may have looked like this (<em><a
-href="http://phdcomics.com/comics/archive.php?comicid=1323">from
-PHDcomics</a></em>):</p>
-<p><img src="img/phd052810s.gif" /></p>
-<p>Version control gives you a better way to track changes for things
-like data files and code, and in a more manageable way. That’s important
-because when the reviews come back on your paper and ask you to perform
-some additional analyses and you open up this directory, it can be
-pretty difficult to figure out which file you should actually use. At
-the very least you’ll spend a bunch of extra time figuring it out before
-you get to work, or at worst you may pick the wrong file and then have
-to redo all your work after realizing the results weren’t the same as in
-the submitted version of the manuscript. For much more detail on setting
-git with R (or troubleshooting), see the <a
-href="http://happygitwithr.com/">happygitwithr.com</a> website.</p>
-<p><br></p>
-<div id="benefits-of-version-control" class="section level3">
-<h3>Benefits of Version Control</h3>
-<ul>
-<li><em>Track changes on steroids</em>
-<ul>
-<li>Tracks every change ever made in groups called commits</li>
-<li>Every commit stores the full state of all of your files at that
-time</li>
-<li>Never lose anything</li>
-<li>Easily unbreak your code/data/manuscript</li>
-<li>No more file name changes</li>
-</ul></li>
-<li><em>Collaboration</em>
-<ul>
-<li>Work on things simultaneously</li>
-<li>See what changes others have made</li>
-<li>Everyone has the most recent version of everything</li>
-</ul></li>
-</ul>
-<p><br></p>
+<div id="example-with-gapminder" class="section level1">
+<h1>Example with gapminder</h1>
+<pre class="r"><code>library(tidyverse)
+library(gapminder)</code></pre>
+<pre class="r"><code>plotPopGrowth &lt;- function(countryToPlot, theData = gapminder) {
+  # this filters data to a specific country
+  oneCountry &lt;- theData %&gt;%
+    filter(country == countryToPlot)
+  
+  # can add some error checking if you want
+  if(!nrow(oneCountry)&gt;0) { # checks if there are values for country
+    stop(&quot;No Data for this Country, please try again&quot;)
+  }
+
+  # this runs the plot
+  ggplot(data=oneCountry) + 
+           geom_line(aes(x=year, y=pop, color=country))
+}</code></pre>
+<pre class="r"><code># plotPopGrowth(&quot;Afghanistans&quot;) # gives error
+plotPopGrowth(&quot;Afghanistan&quot;) </code></pre>
+<p><img src="bonus_lesson_for_loops_files/figure-html/demoTheFunction-1.png" width="672" /></p>
+<pre class="r"><code>plotPopGrowth(&quot;United States&quot;)</code></pre>
+<p><img src="bonus_lesson_for_loops_files/figure-html/demoTheFunction-2.png" width="672" /></p>
+<p>What if we want to make a plot and then save it for every
+country?</p>
+<pre class="r"><code>### LOOPING
+countries &lt;- unique(gapminder$country)
+for(i in seq_along(countries)){
+  plotPopGrowth(countries[i])
+  ggsave(filename = paste0(&quot;Figures/plot_&quot;,countries[i], &quot;.png&quot;))
+}</code></pre>
 </div>
-</div>
-<div id="connecting-rstudio-github" class="section level2">
-<h2>Connecting RStudio &amp; Github</h2>
-<p>For our purposes the “<em>best practice</em>” (i.e.,
-<strong>easier</strong>) for setting up a new github repository in
-RStudio is through an RStudio <em>Project</em>. First, ideally what we
-want to do is create a new repository on <a
-href="https://github.com/">Github</a>, then create a new RStudio Project
-to <strong>clone</strong> (copy) our repository onto our computer (a
-local version). See the steps below.</p>
-<p><br></p>
-<div id="create-a-new-repository-on-github" class="section level3">
-<h3>1. Create a new repository on Github</h3>
-<ul>
-<li>Typically, the preferred method is to create a new repository on
-Github…<strong>HOWEVER</strong>:</li>
-<li>For this class we’ve already created a repository for you, and you
-will get a Github Classroom link via email. When you click the link,
-Github creates a new repository for you, which our class will be able to
-view and work with.</li>
-<li>When you use the Github Classroom link, a repository will be created
-that looks like
-“ucd-r-davis/r-davis-in-class-project-YourGithubUsername”</li>
-</ul>
-</div>
-<div id="clone-your-repository-to-your-computer" class="section level3">
-<h3>2. Clone your repository to your computer</h3>
-<p>You should now have a repository on Github. Our class is all housed
-in the <a href="https://github.com/ucd-r-davis">ucd-r-davis</a>
-Organization, so your repository should appear there, and it should look
-something like this:</p>
-<ul>
-<li><a
-href="https://github.com/ucd-r-davis/r-davis-in-class-project-liza-wood"><code>https://github.com/ucd-r-davis/r-davis-in-class-project-YourGithubUsername</code></a>.</li>
-<li><strong>To <em><code>clone</code></em> your repository</strong>
-(i.e. copy to your computer):
-<ul>
-<li>We’re going to stick with using <strong><code>SSH</code>:</strong>
-link for now. If you successfully used HTTPS, congrats – you can leave
-it that way. But if you’re on the SSH train, look for the big green
-“<em>Code</em>” button. Make sure you select the “<strong>Use
-SSH</strong>” link</li>
-<li>Copy that link (should be something like
-<em><code>git@github.com:ucd-r-davis/r-davis-in-class-project-YourGithubUsername.git</code></em>).</li>
-</ul></li>
-</ul>
-<p><img src="img/clone_button.png" /></p>
-<p><br></p>
-</div>
-<div id="create-a-new-version-controlled-git-rstudio-project"
-class="section level3">
-<h3>3. Create a New Version Controlled (<code>git</code>) RStudio
-Project</h3>
-<p>Now we’ll create an RStudio Project and link our Github repository
-(following <a
-href="http://happygitwithr.com/rstudio-git-github.html#clone-the-new-github-repository-to-your-computer-via-rstudio"><em>Section
-13.3</em> of <code>happygitwithR</code></a>).</p>
-<ul>
-<li><p>In RStudio, start a new Project:
-<code>File &gt; New Project &gt; Version Control &gt; Git</code>.</p></li>
-<li><p>In the “<strong>Repository URL</strong>” paste the URL of your
-new GitHub repository. If you hit <strong><code>Tab</code></strong>, the
-<em>Project directory name</em> will automatically populate with the
-exact name of the repository. This is generally preferred so you can
-keep track of things more easily. You should put this project into a
-subdirectory, which will be <strong>Desktop/R-DAVIS-2024</strong> for
-this class. You should make a folder on your desktop called
-<strong>R-DAVIS-2024</strong> spelled <strong>EXACTLY</strong> like
-that, and put your new GitHub repository into that folder. It should
-look like this:</p></li>
-</ul>
-<p><img src="img/rstudio_git_repo_setup.png" /></p>
-<p><br></p>
-<p>For the rest of this class, <strong>everything</strong> we do will be
-in the R-DAVIS-2022 folder on your Desktop. For the rest of your life,
-however, you can put GitHub repositories anywhere on your computer, but
-it’s really useful to keep them well organized. A common way to do this
-would be a folder under your username called “GitHub_Projects” or
-something like that.</p>
-<p>Another critical thing with git and GitHub is that you should
-<strong>never</strong> nest projects inside of projects. Treat each
-RProject/git repository as a completely separate entity, containing only
-the stuff pertaining to that project. If you try to put a folder that’s
-an RProject inside another folder that’s an RProject, stuff is gonna go
-wrong. Just keep them all separate, but ideally contained in some other
-folder, like “GitHub_Projects”, which is NOT a GitHub repository or
-RProject, just a boring regular folder.</p>
-<ul>
-<li>This new subdirectory that you specified will be all these things:
-<ul>
-<li>a directory on your computer</li>
-<li>a local Git repository, linked to a remote GitHub repository</li>
-<li>an RStudio Project</li>
-<li>it should contain a <code>README.md</code> file with some content
-that we’ve created…we’ll edit that next.</li>
-<li>it should have a data folder with some data we’ll use soon</li>
-</ul></li>
-</ul>
-<!-- STOP and check in here...have folks gotten this part? Are there questions? Ask some paired/group questions?-->
-<p><br></p>
-<div id="if-you-made-it-thus-far-congrats" class="section level4">
-<h4><em>IF YOU MADE IT THUS FAR CONGRATS!</em></h4>
-<p><br></p>
-</div>
-</div>
-<div id="push-commit-changes-to-your-readme.md" class="section level3">
-<h3>4. Push &amp; Commit Changes to your <code>README.md</code></h3>
-<p>We’ll go over this part in class. If you successfully created your
-RStudio project, you’ve done most of the hard work…what remains is:</p>
-<ul>
-<li>Test whether we can make changes or <strong>edit</strong> our README
-on our local <code>master</code> branch (copy of the repository on your
-computer).</li>
-<li><strong><code>commit</code></strong> these changes (make a version
-control record of your change/s)</li>
-<li><strong><code>push</code></strong> these change back to the
-<code>remote</code> which is the copy of the repository on
-Github.com.</li>
-</ul>
-<p><br></p>
-<div id="edit-readme" class="section level4">
-<h4>Edit README</h4>
-<p>In RStudio, open your new project
-(<code>r-davis-in-class-project-YourGithubUsername</code>). Navigate to
-the <em>Files</em> tab and open the <code>README.md</code> file. You can
-click on it in the window and it will automatically open up.</p>
-<ul>
-<li><strong>Edit your README by adding in the following:</strong>
-<ul>
-<li>Name</li>
-<li>Preferred pronouns</li>
-<li>General research area/interest</li>
-<li>Delete all the original text in the README, leaving just the
-information about you</li>
-</ul></li>
-</ul>
-<p><br></p>
-</div>
-<div id="stage-commit-to-git" class="section level4">
-<h4>Stage &amp; Commit to Git</h4>
-<ul>
-<li><p>Click on the <strong>Git</strong> tab. When you click on the git
-tab, you should see the <code>README.md</code>, and a
-<code>.Rproj</code> file, and perhaps a few other files. That’s
-ok!</p></li>
-<li><p>Click on the small box to the left of the <code>README.md</code>
-to stage the file. Then click the <code>commit</code> button. You’ll see
-a new widow, on the upper right you need to type a <code>commit</code>
-message, something simple, short, and descriptive. Then click the
-<code>commit</code> button. You should see a little box with message
-committed.</p></li>
-<li><p>Finally before you close everything, hit the
-<strong>PUSH</strong> button. This <em>pushes</em> the changes to the
-github repository (you may need to enter your Github username &amp;
-password once depending on whether you used <code>https</code> or
-<code>ssh</code>).</p></li>
-<li><p>If you go back to the repository in your browser and refresh the
-page, you should see the changes you’ve made. Equally important, any
-collaborator or instructor can now <code>pull</code> those exact changes
-into a copy of the repo on our computer.</p></li>
-</ul>
-<p>Hopefully that all worked! You can now push and pull from your
-repository.</p>
-<p><br> Parts of these instructions were adapted from those written by
-Ethan White for his <a
-href="http://www.datacarpentry.org/semester-biology/">Data Carpentry for
-Biologists</a> course, and from Jenny Bryan’s <a
-href="http://happygitwithr.com/">happygitwithr.com</a> website.</p>
-</div>
-</div>
+<div id="example-with-file-imports" class="section level1">
+<h1>Example with file imports</h1>
+<p>The tidyverse has its own way to do loops</p>
+<pre class="r"><code>xlist &lt;- list.files(path = &quot;data/2001_mauna_loa_met_data/&quot;, 
+                    pattern = &quot;*.txt&quot;, 
+                    full.names = TRUE)
+xlist</code></pre>
+<pre><code>## character(0)</code></pre>
+<pre class="r"><code>column_headers &lt;- 
+  c(&quot;siteID&quot;, &quot;year&quot;, &quot;month&quot;, 
+    &quot;day&quot;, &quot;hour24&quot;, &quot;min&quot;,
+    &quot;windDir&quot;, &quot;windSpeed_m_s&quot;, &quot;windSteady&quot;, 
+    &quot;baro_hPa&quot;, &quot;temp_C_2m&quot;, &quot;temp_C_10m&quot;, 
+    &quot;temp_C_towertop&quot;, &quot;rel_humid&quot;, &quot;precip_intens_mm_hr&quot;)
+
+ml &lt;-
+  xlist %&gt;%
+  map_df( ~ read.table(., 
+                       sep = &quot;&quot;,
+                       header = FALSE, 
+                       quote = &quot;&quot;, 
+                       col.names = column_headers))
+         
+glimpse(ml)</code></pre>
+<pre><code>## Rows: 0
+## Columns: 0</code></pre>
+<p>This lesson was contributed by <a
+href="https://orcid.org/0000-0002-8276-210X">Michael Koontz</a>.</p>
 </div>
 
 
