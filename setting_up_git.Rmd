@@ -49,6 +49,7 @@ Version control gives you a better way to track changes for things like data fil
 
 Setting up Git involves some tricky stuff with SSH keys, which are GitHub's way of making sure no one besides you messes with your account and your code. They can be tricky to set up, but we're here to help! Try going through this walkthrough before class so we can spend more of class homing in on folks' specific issues. (Note: this walkthrough is for a Mac but it should be pretty much the same for a PC user. if you're a PC user and this walkthrough isn't working, pause and we'll figure it out in class) It's ok if you get stuck!
 
+### Creating a SSH Key
 1) Open RStudio. From the RStudio toolbar at the top, open Tools > Global Options
 ![](img/1_git.png)
 2) Click on Git/SVN. If the box that says "Enable version control interface for RStudio projects" is not checked, check the box. Then, click "Browse" next to "Git executable" and enter the filepath to your git (which you already should have installed, in step 5!) To find your git filepath, go to your Terminal and type  which git then hit enter.
@@ -62,12 +63,14 @@ Setting up Git involves some tricky stuff with SSH keys, which are GitHub's way 
 6) Next click "view public key" and copy all of the text in the pop-up window using using Ctrl C or Command C to get the public key contents in your clipboard. 
 ![](img/6_git.png)
 
+### Adding SSH key to Github
 7) Go to your Github Account > profile photo > Settings as shown below
 ![](img/7_git.png)
 8) Follow these steps: (your public key is now in your clipboard, so when you get to "paste your public key" you can just hit Ctrl V or Command V.
 ![](img/8_git.png)
 9) Assuming you've created your own repository already, go to https://github.com/orgs/UCD-R-DAVIS/repositories and click on the one with your username on the end. (If you haven't made a repository yet, make sure you've filled out the survey https://forms.gle/YahVutQ6Ds1CpHFP6 and followed the instructions)
 
+### Saving a Github repository to your local computer
 10) The next step is to clone your repository. To start this process, click the Green "Code" button then click the "SSH" tab. Copy the link using the Screenshot 2023-09-28 at 10.30.16 AM.png icon
 ![](img/10_git.png)
 
@@ -77,10 +80,10 @@ Setting up Git involves some tricky stuff with SSH keys, which are GitHub's way 
 ![](img/12_git.png)
 13) Click on "Git"
 ![](img/13_git.png)
-14) Paste the link from your clipboard (using Ctrl V or Command V) where it says "Repository URL". The "Project directory name" is what you want your R-DAVIS folder to be called. If you hit Tab, the Project directory name will automatically create a name for you. This is generally preferred so you can keep track of things more easily. Lastly, decide where you want your R projects to live on your computer, and navigate there using "Browse". For example, I've created a folder called "R_Projects". (Note the underline -- it's a good idea to not have any spaces in your filenames or filepaths.) For the rest of this class, everything we do will be in this folder. 
+14) Paste the link from your clipboard (using Ctrl V or Command V) where it says "Repository URL". The "Project directory name" is what you want your R-DAVIS folder to be called. If you hit Tab, the Project directory name will automatically create a name for you. This is generally preferred so you can keep track of things more easily. Lastly, decide where you want your R projects to live on your computer, and navigate there using "Browse". We suggest creating a "R-Projects" folder on either your desktop or your **local** documents folder. For example, Tara created a "R-Projects" folder in her local Documents folder and named her R-DAVIS folder after her directory name: **Documents/R-Projects/R_DAVIS_in_class_project_tarapozzi**. (Note the dash and underscores -- it's a good idea to not have any spaces in your filenames or filepaths) For the rest of this class, everything we do will be in this folder.  
 
-As a forewarning, sometimes people have had trouble using MyCloud or other cloud-based storage for their R folders, so we recommend storing locally on your desktop. 
-![](img/14_git.png)
+As a forewarning, sometimes people have had trouble using MyCloud or other cloud-based storage for their R folders, so that is why we recommend storing locally on your desktop or in your documents folder. 
+![](img/rstudio_git_repo_setup.png)
 15) Click "Create Project" -- and you're done! 
 
 
@@ -93,14 +96,14 @@ For our purposes the "*best practice*" (i.e., **easier**) for setting up a new g
 
 <br>
 
-### 1. Create a new repository on Github
+1) Create a new repository on Github
 
  - Typically, the preferred method is to create a new repository on Github...**HOWEVER**:
  - For this class we've already created a repository for you, and you will get a Github Classroom link via email. When you click the link, Github creates a new repository for you, which our class will be able to view and work with.
  - When you use the Github Classroom link, a repository will be created that looks like "ucd-r-davis/r-davis-in-class-project-YourGithubUsername"
 
 
-### 2. Clone your repository to your computer
+2) Clone your repository to your computer
 
 You should now have a repository on Github. Our class is all housed in the [UCD-R-DAVIS](https://github.com/ucd-r-davis) Organization, so your repository should appear there, and it should look something like this:
 
@@ -113,20 +116,20 @@ You should now have a repository on Github. Our class is all housed in the [UCD-
 
 <br>
 
-### 3. Create a New Version Controlled (`git`) RStudio Project
+3) Create a New Version Controlled (`git`) RStudio Project
 
 Now we'll create an RStudio Project and link our Github repository (following [*Section 13.3* of `happygitwithR`](http://happygitwithr.com/rstudio-git-github.html#clone-the-new-github-repository-to-your-computer-via-rstudio)).
 
   - In RStudio, start a new Project: `File > New Project > Version Control > Git`. 
   
 
-  - In the “**Repository URL**” paste the URL of your new GitHub repository. If you hit **`Tab`**, the *Project directory name* will automatically populate with the exact name of the repository. This is generally preferred so you can keep track of things more easily. You should put this project into a subdirectory. In this example, I've created a **Desktop/R_DAVIS_2024** for this class. (Note the underline -- it's a good idea to not have any spaces in your filenames or filepaths.) For the rest of this class, everything we do will be in this folder. 
+  - In the “**Repository URL**” paste the URL of your new GitHub repository. If you hit **`Tab`**, the *Project directory name* will automatically populate with the exact name of the repository. This is generally preferred so you can keep track of things more easily. You should put this project into a subdirectory. We suggest creating a "R-Projects" folder on either your desktop or your **local** documents folder. For this class, I've created a **Documents/R-Projects/R_DAVIS_in_class_project_tarapozzi**. (Note the dash and underscores -- it's a good idea to not have any spaces in your filenames or filepaths) For the rest of this class, everything we do will be in this folder. 
   
 ![](img/rstudio_git_repo_setup.png)
 
 <br>
 
-For the rest of your life, however, you can put GitHub repositories anywhere on your computer, but it's really useful to keep them well organized. A common way to do this would be a folder under your username called "R_Projects" or something like that.
+For the rest of your life now, you can put GitHub repositories in this "R-Projects folder". It's really useful to keep all your work well organized!
 
 Another critical thing with git and GitHub is that you should **never** nest projects inside of projects. Treat each RProject/git repository as a completely separate entity, containing only the stuff pertaining to that project. If you try to put a folder that's an RProject inside another folder that's an RProject, stuff is gonna go wrong. Just keep them all separate, but ideally contained in some other folder, like "R_Projects", which is NOT a GitHub repository or RProject, just a boring regular folder.
 
