@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Resources</title>
+
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="site_libs_extra/academicons-1.8.0/css/academicons.css"/>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">
+    <span class="fa fa-info-circle  fa-1x"></span>
+     
+    About
+  </a>
+</li>
+<li>
+  <a href="syllabus.html">
+    <span class="fa fa-map fa-1x"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Set Up
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="computer_setup.html">Computer Setup</a>
+    </li>
+    <li>
+      <a href="setting_up_git.html">Setting up Git Repository</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="fa fa-book  fa-1x"></span>
+     
+    Tutorials
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="lesson_01_intro_r_rstudio.html">Intro to Programming, R, &amp; RStudio</a>
+    </li>
+    <li>
+      <a href="lesson_02_project_management.html">Project Management</a>
+    </li>
+    <li>
+      <a href="lesson_03_how_r_thinks_about_data.html">How R Thinks About Data</a>
+    </li>
+    <li>
+      <a href="lesson_04_spreadsheets_condensed.html">Spreadsheets</a>
+    </li>
+    <li>
+      <a href="lesson_05_data_import.html">Starting With Spreadsheets in R</a>
+    </li>
+    <li>
+      <a href="lesson_06_data_manipulation_pt1.html">Data Manipulation Pt1</a>
+    </li>
+    <li>
+      <a href="lesson_08_data_manipulation_pt2.html">Data Manipulation Pt2</a>
+    </li>
+    <li>
+      <a href="lesson_09_data_viz_pt1.html">Data Visualization Pt1</a>
+    </li>
+    <li>
+      <a href="lesson_11_data_viz_pt2.html">Data Visualization Pt2</a>
+    </li>
+    <li>
+      <a href="lesson_12_lubridate.html">Date-times with lubridate</a>
+    </li>
+    <li>
+      <a href="lesson_13_functions.html">Writing functions</a>
+    </li>
+    <li>
+      <a href="lesson_14_iteration.html">Iteration</a>
+    </li>
+    <li>
+      <a href="lesson_rmarkdown.html">Literate Programming with RMarkdown</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="lectures.html">
+    <span class="fa fa-slideshare fa-1x"></span>
+     
+    Videos
+  </a>
+</li>
+<li>
+  <a href="assignments.html">
+    <span class="fa fa-paperclip fa-1x"></span>
+     
+    Assignments
+  </a>
+</li>
+<li>
+  <a href="resources.html">
+    <span class="fa fa-list"></span>
+     
+    Resources
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="contact.html">
+    <span class="fa fa-hand-spock-o"></span>
+     
+    Contact
+  </a>
+</li>
+<li>
+  <a href="https://github.com/UCD-R-DAVIS/R-DAVIS">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Resources</h1>
+
+</div>
+
+
+<div id="section" class="section level2 tabset tabset-fade">
+<h2 class="tabset tabset-fade"></h2>
+<p>There are many resources online and in print. This is by no means a
+comprehensive list, but hopefully a launching pad for some very useful
+website and books. All of these examples provide code in same shape or
+form.</p>
+<!--### Bonus Lessons -->
+<!-- - [Importing and exporting data, extended](bonus_2020F_lesson_data_import.html) -->
+<!-- - [Longer Spreadsheets Lesson](bonus_2019_lesson_spreadsheets.html) -->
+<!-- - [Joining Data](bonus_2019_lesson_joins.html) -->
+<!-- - [Pipelines: data import %>% dplyr %>% ggplot2](bonus_2019_lesson_import_dplyr_ggplot2.html) -->
+<!-- - [Pipelines: Download CO2 & Ice Core Data & Visualize](bonus_2019_lesson_ice_core_CO2_web_data.html) -->
+<!-- - [For Loops](bonus_2019_lesson_for_loops.html) -->
+<!-- - [Using purrr](bonus_2019_lesson_purrr_tutorial.html) -->
+<!-- - [Mapping in R](https://ryanpeek.github.io/mapping-in-R-workshop/) -->
+<!-- - [Text Mining](bonus_2019_lesson_text_mining_mlk.html) -->
+<!-- - [Github Collaboration with Branches](bonus_2019_lesson_github_collaboration.html) -->
+<!-- - [Data Carpentry: R and SQL](http://www.datacarpentry.org/R-ecology-lesson/05-r-and-databases.html) -->
+<!-- - [Longer Iteration Lesson](bonus_2019_lesson_iteration.html) -->
+<!--### Resources -->
+<!--#### *R Lessons & Tutorials* -->
+<!-- * [Software Carpentry: **R for Reproducible Scientific Analysis**](http://data-lessons.github.io/gapminder-R/) -->
+<!-- * [Data Carpentry: **R for Data Analysis and Visualization of Ecological Data**](http://www.datacarpentry.org/R-ecology-lesson/) -->
+<!-- * [Data Carpentry: **Data Organization in Spreadsheets**](http://www.datacarpentry.org/spreadsheet-ecology-lesson/) -->
+<!-- * [Data Carpentry: **Genomics Lesson**](https://jasonjwilliamsny.github.io/tidiness-genomics/) -->
+<!-- * [ANGUS: **Analyzing High Throughput Sequencing Data; Exploratory RNAseq data analysis using RMarkdown**](http://angus.readthedocs.io/en/2017/index.html) -->
+<!-- * [**RStudio Webinars**, many topics](https://www.rstudio.com/resources/webinars/) -->
+<!-- * [**Coding Club**, great resource with many tutorials](https://ourcodingclub.github.io/) -->
+<!--#### *R eBooks/Courses* -->
+<!-- * [Jenny Bryan's **Stat545.com**](http://stat545.com/) -->
+<!-- * [Garrett Grolemund and Hadley Wickham's **R For Data Science**](http://r4ds.had.co.nz/) -->
+<!-- * [Kieran Healy's **Data Visualization for Social Science**](http://socviz.co/) -->
+<!-- * [Ethan White and Zack Brym's **Data Carpentry for Biologists**](http://www.datacarpentry.org/semester-biology/) -->
+<!-- * [Chester Ismay and Albert Y. Kim's **Modern DiveR**](https://ismayc.github.io/moderndiver-book/) -->
+<!-- * [Colin Gillespie and Robin Lovelace **Efficient R Programming**](https://csgillespie.github.io/efficientR/) -->
+<!-- * [Julia Silge and David Robinson **Text Mining with R**](http://tidytextmining.com/) -->
+<!-- * [Hadley Wickham's **Advanced R**](http://adv-r.had.co.nz/) -->
+<!--#### *Git/Github* -->
+<!-- * [Jenny Bryan's **Happy Git and Github for the useR**](http://happygitwithr.com/) -->
+<!-- * [Coding Club **Intro to Github**](https://ourcodingclub.github.io/2017/02/27/git.html) -->
+<div id="datasets" class="section level3">
+<h3>Datasets</h3>
+<p>This is a list of most of the data sources used in this course.</p>
+<ul>
+<li>From <a href="https://doi.org/10.6084/m9.figshare.1314459.v6">The
+Portal Project Teaching Database</a>
+<ul>
+<li><a
+href="data/Portal_rodents_19772002_scinameUUIDs.csv">Portal_rodents_19772002_scinameUUIDs.csv</a>
+[raw trapping data]</li>
+<li><a href="data/species.csv">species.csv</a> [species id
+metadata]</li>
+<li><a href="data/surveys.csv">surveys.csv</a> [trapping data by record
+id]</li>
+<li><a href="data_output/surveys_complete.csv">surveys_complete.csv</a>
+[cleaned trapping data by record id]</li>
+<li><a href="data/combined.csv">combined.csv</a> [trapping data merged
+with record id metadata]</li>
+<li><a href="data/plots.csv">plots.csv</a> [plot type metadata]</li>
+</ul></li>
+<li>From <a
+href="https://jasonjwilliamsny.github.io/tidiness-genomics/">Data
+Carpentry: Genomics Lesson</a>
+<ul>
+<li><a
+href="data/sequencing_results_metadata.txt">sequencing_results_metadata.txt</a>
+[metadata from DNA sequencing]</li>
+</ul></li>
+<li>From <a href="http://www.datacarpentry.org/R-ecology-lesson/">Data
+Carpentry: R for Data Analysis and Visualization of Ecological Data</a>
+<ul>
+<li><a
+href="data/survey_data_spreadsheet_messy.xls">survey_data_spreadsheet_messy.xls</a>
+[example of untidy data]</li>
+</ul></li>
+<li>From <a href="http://data-lessons.github.io/gapminder-R/">Software
+Carpentry: R for Reproducible Scientific Analysis</a>
+<ul>
+<li><a href="data/continents.RDA">continents.RDA</a> [gapminder
+continent-level data]</li>
+<li><a href="data/wide_eg.csv">wide_eg.csv</a> [blood albumin
+levels]</li>
+<li><a href="data/stocks.tsv">stocks.tsv</a> [restaurant stock
+data]</li>
+<li><a href="data/gapminder.csv">gapminder.csv</a> [country
+characteristics by year]</li>
+</ul></li>
+<li>From <a
+href="http://angus.readthedocs.io/en/2017/rmarkdown_rnaseq.html">ANGUS:
+Analyzing High Throughput Sequencing Data</a>
+<ul>
+<li><a href="data/rnaseq.zip">rnaseq.zip</a> [zipped folder of RNA
+sequence data]</li>
+</ul></li>
+<li>From <a href="https://gge-ucd.github.io/wRangling-Ecology/">Data
+wRangling for Ecologists</a>
+<ul>
+<li><a
+href="data/2001_mauna_loa_met_data.zip">2001_mauna_loa_met_data.zip</a>
+[raw meteorological station data from Mauna Loa]</li>
+<li><a href="data/mauna_loa_met_2001_minute.rda">2001 Mauna Loa
+meteorological station data</a> [tidy format of minute-scale
+meteorological data from Mauna Loa Observatory]</li>
+<li><a href="data/2015_NFA_solinst_08_05.csv">solinst temp/stage logger
+data (full)</a> [pressure transducer data logger data from NF American
+River]</li>
+<li><a href="data/2015_NFA_solinst_08_05_A.csv">solinst A</a> [partial
+pressure transducer data logger data from NF American River]</li>
+<li><a href="data/2015_NFA_solinst_08_05_B.csv">solinst B</a> [partial
+pressure transducer data logger data from NF American River]</li>
+<li><a href="data/2015_NFY_solinst.csv">solinst 2015</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="presentations" class="section level3">
+<h3>Presentations</h3>
+<ul>
+<li><a href="https://youtu.be/taY6GrZ6vzE">Ryan Peek on using the
+<code>sf</code> package</a></li>
+<li><a href="https://youtu.be/CHBOVuo6RCo">Rich Pauloo on using
+RMarkdown</a></li>
+<li><a href="https://youtu.be/mHz4wxo-Q4U">Kate Tiedeman tutorial on
+using <code>raster</code></a></li>
+<li><a href="https://youtu.be/jgghG1K3740">Clark Fitzgerald on
+integrating the shell with R</a></li>
+<li><a href="https://youtu.be/8G6bBum3O9A">Myfanwy Johnston on unit
+testing (or code testing) in R</a></li>
+<li><a href="https://youtu.be/9q7gssUP8UA">Michael Levy tutorial on
+using the <code>tidyverse</code></a></li>
+<li><a
+href="http://d-rug.github.io/images/20171026/20171023_DRUG_map_walk.html#1">Brandon
+Hurr “Intro to using <code>purrr</code></a></li>
+<li><a href="http://d-rug.github.io/blog/2016/hurr-dplyr2">Brandon Hurr
+“dplyr II: Joins and Set Operations”</a></li>
+</ul>
+</div>
+<div id="quantitative-courses" class="section level3">
+<h3>Quantitative Courses</h3>
+<p><a
+href="https://docs.google.com/spreadsheets/d/1aENRlOvGxgvLS4DCiJy6WuhzQCc7LYZAVSqbHHBSzWA/edit?usp=sharing">This
+is a list of quantitative courses</a> commonly taken by students in the
+Graduate Group in Ecology at UC Davis. For those of you taking the
+course in person, these are classes you may end up taking in the future
+that will put your new R skills to use.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

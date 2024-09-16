@@ -469,7 +469,7 @@ div.tocify {
 <p>Once we’ve setup R/RStudio, and installed git, the next step is
 seeing whether we can connect RStudio with Git. Please try this at home
 before class, and then we’ll go through it when we meet.</p>
-<br>
+<p><br></p>
 <div class="blue">
 <p><strong>This lesson assumes you have:</strong></p>
 <ul>
@@ -489,9 +489,9 @@ version control where possible.</p>
 <div id="introduction-to-version-control" class="section level2">
 <h2>Introduction to Version Control</h2>
 <p>At some point many of us have probably had files in a directory that
-may have looked like this (<em><a
-href="http://phdcomics.com/comics/archive.php?comicid=1323">from
-PHDcomics</a></em>):</p>
+may have looked like this (<a
+href="http://phdcomics.com/comics/archive.php?comicid=1323"><em>from
+PHDcomics</em></a>):</p>
 <p><img src="img/phd052810s.gif" /></p>
 <p>Version control gives you a better way to track changes for things
 like data files and code, and in a more manageable way. That’s important
@@ -537,22 +537,30 @@ class homing in on folks’ specific issues. (Note: this walkthrough is
 for a Mac but it should be pretty much the same for a PC user. if you’re
 a PC user and this walkthrough isn’t working, pause and we’ll figure it
 out in class) It’s ok if you get stuck!</p>
+<p><br></p>
 <div id="creating-a-ssh-key" class="section level3">
-<h3>Creating a SSH Key</h3>
-<ol style="list-style-type: decimal">
+<h3>1) Creating a SSH Key</h3>
+<ol style="list-style-type: lower-alpha">
 <li>Open RStudio. From the RStudio toolbar at the top, open Tools &gt;
 Global Options</li>
 </ol>
-<p><img src="img/1_git.png" /> 2) Click on Git/SVN. If the box that says
-“Enable version control interface for RStudio projects” is not checked,
-check the box. Then, click “Browse” next to “Git executable” and enter
-the filepath to your git (which you already should have installed, in
-step 5!) To find your git filepath, go to your Terminal and type which
-git then hit enter.</p>
-<p><img src="img/2_git.png" /> 3) Click on “Create SSH Key”</p>
-<p><img src="img/3_git.png" /> 4) Click Create, without changing the
-defaults. You can leave Passphrase blank.</p>
-<ol start="5" style="list-style-type: decimal">
+<p><img src="img/1_git.png" /></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Click on Git/SVN. If the box that says “Enable version control
+interface for RStudio projects” is not checked, check the box. Then,
+click “Browse” next to “Git executable” and enter the filepath to your
+git (which you already should have installed, in step 5!) To find your
+git filepath, go to your Terminal and type which git then hit
+enter.</li>
+</ol>
+<p><img src="img/2_git.png" /></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Click on “Create SSH Key”</li>
+</ol>
+<p><img src="img/3_git.png" /></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li><p>Click Create, without changing the defaults. You can leave
+Passphrase blank.</p></li>
 <li><p>Highlight and copy the filepath listed under “The SSH key will be
 created at:” using Ctrl C or Command C</p></li>
 <li><p>Next click “view public key” and copy all of the text in the
@@ -560,64 +568,81 @@ pop-up window using using Ctrl C or Command C to get the public key
 contents in your clipboard.</p></li>
 </ol>
 <p><img src="img/6_git.png" /></p>
+<p><br></p>
 </div>
 <div id="adding-ssh-key-to-github" class="section level3">
-<h3>Adding SSH key to Github</h3>
-<ol start="7" style="list-style-type: decimal">
+<h3>2) Adding SSH key to Github</h3>
+<ol style="list-style-type: lower-alpha">
 <li>Go to your Github Account &gt; profile photo &gt; Settings as shown
 below</li>
 </ol>
-<p><img src="img/7_git.png" /> 8) Follow these steps: (your public key
-is now in your clipboard, so when you get to “paste your public key” you
-can just hit Ctrl V or Command V.</p>
-<p><img src="img/8_git.png" /> 9) Assuming you’ve created your own
-repository already, go to <a
+<p><img src="img/7_git.png" /></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Follow these steps: (your public key is now in your clipboard, so
+when you get to “paste your public key” you can just hit Ctrl V or
+Command V.</li>
+</ol>
+<p><img src="img/8_git.png" /></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Assuming you’ve created your own repository already, go to <a
 href="https://github.com/orgs/UCD-R-DAVIS/repositories"
 class="uri">https://github.com/orgs/UCD-R-DAVIS/repositories</a> and
 click on the one with your username on the end. (If you haven’t made a
 repository yet, make sure you’ve filled out the survey <a
 href="https://forms.gle/YahVutQ6Ds1CpHFP6"
 class="uri">https://forms.gle/YahVutQ6Ds1CpHFP6</a> and followed the
-instructions)</p>
+instructions)</li>
+</ol>
+<p><br></p>
 </div>
 <div id="saving-a-github-repository-to-your-local-computer"
 class="section level3">
-<h3>Saving a Github repository to your local computer</h3>
-<ol start="10" style="list-style-type: decimal">
+<h3>3) Saving a Github repository to your local computer</h3>
+<ol style="list-style-type: lower-alpha">
 <li>The next step is to clone your repository. To start this process,
 click the Green “Code” button then click the “SSH” tab. Copy the link
 using the Screenshot 2023-09-28 at 10.30.16 AM.png icon</li>
 </ol>
 <p><img src="img/10_git.png" /></p>
-<ol start="11" style="list-style-type: decimal">
+<ol start="2" style="list-style-type: lower-alpha">
 <li>Now we’re ready to make a local version of our repository on our
 desktop. Open RStudio and click on New Project.</li>
 </ol>
-<p><img src="img/11_git.png" /> 12) Click on “Version Control”.</p>
-<p><img src="img/12_git.png" /> 13) Click on “Git”</p>
-<p><img src="img/13_git.png" /> 14) Paste the link from your clipboard
-(using Ctrl V or Command V) where it says “Repository URL”. The “Project
-directory name” is what you want your R-DAVIS folder to be called. If
-you hit Tab, the Project directory name will automatically create a name
-for you. This is generally preferred so you can keep track of things
-more easily. Lastly, decide where you want your R projects to live on
-your computer, and navigate there using “Browse”. We suggest creating a
-“R-Projects” folder on either your desktop or your
-<strong>local</strong> documents folder. For example, Tara created a
-“R-Projects” folder in her local Documents folder and named her R-DAVIS
-folder after her directory name:
+<p><img src="img/11_git.png" /></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Click on “Version Control”.</li>
+</ol>
+<p><img src="img/12_git.png" /></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Click on “Git”</li>
+</ol>
+<p><img src="img/13_git.png" /></p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Paste the link from your clipboard (using Ctrl V or Command V) where
+it says “Repository URL”. The “Project directory name” is what you want
+your R-DAVIS folder to be called. If you hit Tab, the Project directory
+name will automatically create a name for you. This is generally
+preferred so you can keep track of things more easily. Lastly, decide
+where you want your R projects to live on your computer, and navigate
+there using “Browse”. We suggest creating a “R-Projects” folder on
+either your desktop or your <strong>local</strong> documents folder. For
+example, Tara created a “R-Projects” folder in her local Documents
+folder and named her R-DAVIS folder after her directory name:
 <strong>Documents/R-Projects/R_DAVIS_in_class_project_tarapozzi</strong>.
 (Note the dash and underscores – it’s a good idea to not have any spaces
 in your filenames or filepaths) For the rest of this class, everything
-we do will be in this folder.</p>
-<p>As a forewarning, sometimes people have had trouble using MyCloud or
-other cloud-based storage for their R folders, so that is why we
-recommend storing locally on your desktop or in your documents
-folder.</p>
-<p><img src="img/rstudio_git_repo_setup.png" /> 15) Click “Create
-Project” – and you’re done!</p>
+we do will be in this folder. As a forewarning, sometimes people have
+had trouble using MyCloud or other cloud-based storage for their R
+folders, so that is why we recommend storing locally on your desktop or
+in your documents folder.</li>
+</ol>
+<p><img src="img/rstudio_git_repo_setup.png" /></p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Click “Create Project” – and you’re done!</li>
+</ol>
 <p>Now you have your very own corner of the internet where all of your
 work for this class will live.</p>
+<p><br></p>
 </div>
 </div>
 <div
@@ -633,9 +658,8 @@ href="https://github.com/">Github</a>, then create a new RStudio Project
 to <strong>clone</strong> (copy) our repository onto our computer (a
 local version). See the steps below.</p>
 <p><br></p>
-<ol style="list-style-type: decimal">
-<li>Create a new repository on Github</li>
-</ol>
+<div id="create-a-new-repository-on-github" class="section level3">
+<h3>1) Create a new repository on Github</h3>
 <ul>
 <li>Typically, the preferred method is to create a new repository on
 Github…<strong>HOWEVER</strong>:</li>
@@ -647,9 +671,10 @@ view and work with.</li>
 that looks like
 “ucd-r-davis/r-davis-in-class-project-YourGithubUsername”</li>
 </ul>
-<ol start="2" style="list-style-type: decimal">
-<li>Clone your repository to your computer</li>
-</ol>
+<p><br></p>
+</div>
+<div id="clone-your-repository-to-your-computer" class="section level3">
+<h3>2) Clone your repository to your computer</h3>
 <p>You should now have a repository on Github. Our class is all housed
 in the <a href="https://github.com/ucd-r-davis">UCD-R-DAVIS</a>
 Organization, so your repository should appear there, and it should look
@@ -671,10 +696,11 @@ SSH</strong>” link</li>
 </ul>
 <p><img src="img/clone_button.png" /></p>
 <p><br></p>
-<ol start="3" style="list-style-type: decimal">
-<li>Create a New Version Controlled (<code>git</code>) RStudio
-Project</li>
-</ol>
+</div>
+<div id="create-a-new-version-controlled-git-rstudio-project"
+class="section level3">
+<h3>3) Create a New Version Controlled (<code>git</code>) RStudio
+Project</h3>
 <p>Now we’ll create an RStudio Project and link our Github repository
 (following <a
 href="http://happygitwithr.com/rstudio-git-github.html#clone-the-new-github-repository-to-your-computer-via-rstudio"><em>Section
@@ -721,6 +747,7 @@ that we’ve created…we’ll edit that next.</li>
 </ul>
 <!-- STOP and check in here...have folks gotten this part? Are there questions? Ask some paired/group questions?-->
 <p><br></p>
+</div>
 </div>
 <div id="push-commit-changes-to-your-readme.md" class="section level2">
 <h2>Push &amp; Commit Changes to your <code>README.md</code></h2>
