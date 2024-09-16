@@ -33,11 +33,11 @@ Students completing this course should be able to:
  - Search for and access new learning materials to further develop their computational skills
  - Apply these tools to address scientific research questions
 
-## Course format  
+## Course Format  
 
 To get the most out of in-class time together, R-DAVIS will combine video material with in-person discussion and activities that build on the video material for that week. Unless unforeseen circumstances arise, videos will be posted by Monday to the relevant week on the Lectures page. Please come to class having watched the material relevant to that week's lesson, and perhaps having taken a cursory attempt at trying out what is covered in the videos. We are organizing the course this way so as to spend less of our time together lecturing, and more time working and learning together. The general plan for each course period will be: (1) brief overview of topic and tasks for class; (2) in-class challenge activities; (3) debrief of challenge activities; (4) get started on weekly "at-home" lab assignment as time allows.
 
-## Self-grading and class expectations 
+## Self-grading and Class Expectations 
 R-DAVIS follows a self-grading protocol. At a minimum, each student is expected to attend class every Thursday, submit weekly assignments, and take the final assignment. Additionally, it is strongly encouraged for students to attend the weekly help sessions on Tuesdays.
 
 At the start of the quarter, each student specifies how they would like to earn credit for the course (e.g., complete the weekly homework as assigned or in application to their own work). During finals week, we will then ask each student to report on how well they met their goals for the quarter, plus some additional information on their successes and challenges throughout the quarter. Each student will also have to complete a final assignment at the end of the quarter. While the assignment is ungraded, we will use this as an opportunity to provide individual feedback to each student on concepts they would benefit from focusing on moving forward. 
