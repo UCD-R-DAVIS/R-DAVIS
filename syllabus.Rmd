@@ -38,49 +38,121 @@ Students completing this course should be able to:
 To get the most out of in-class time together, R-DAVIS will combine video material with in-person discussion and activities that build on the video material for that week. Unless unforeseen circumstances arise, videos will be posted by Monday to the relevant week on the Lectures page. Please come to class having watched the material relevant to that week's lesson, and perhaps having taken a cursory attempt at trying out what is covered in the videos. We are organizing the course this way so as to spend less of our time together lecturing, and more time working and learning together. The general plan for each course period will be: (1) brief overview of topic and tasks for class; (2) in-class challenge activities; (3) debrief of challenge activities; (4) get started on weekly "at-home" lab assignment as time allows.
 
 ## Self-grading and Class Expectations 
-R-DAVIS follows a self-grading protocol. At a minimum, each student is expected to attend class every Thursday, submit weekly assignments, and take the final assignment. Additionally, it is strongly encouraged for students to attend the weekly help sessions on Tuesdays.
+R-DAVIS follows a self-grading protocol. In order to pass the class, each student is expected to attend class every Thursday, submit weekly assignments, and take the midterm and final assignment. Additionally, it is strongly encouraged for students to attend the weekly help sessions on Tuesdays.
 
-At the start of the quarter, each student specifies how they would like to earn credit for the course (e.g., complete the weekly homework as assigned or in application to their own work). During finals week, we will then ask each student to report on how well they met their goals for the quarter, plus some additional information on their successes and challenges throughout the quarter. Each student will also have to complete a final assignment at the end of the quarter. While the assignment is ungraded, we will use this as an opportunity to provide individual feedback to each student on concepts they would benefit from focusing on moving forward. 
+At the start of the quarter, each student specifies how they would like to earn credit for the course (e.g., complete the weekly homework as assigned or in application to their own work). During finals week, we will then ask each student to report on how well they met their goals for the quarter, plus some additional information on their successes and challenges throughout the quarter. 
+
+Each student will also have to complete a midterm and final assignment. Both assignments will be ungraded, but we will use these assignments as an opportunity to provide individual feedback to each student on concepts they would benefit from focusing on moving forward. 
 
 ## Schedule  
 
-#### Week 1 (Sept. 26)
+#### Week 1 
+*Sept. 24*
+
+- Pre-class setup help
+
+*Sept. 26*
+
 - Course intro
+
 - Intro to git/GitHub and RStudio
 
-#### Week 2 (Oct. 3)
+#### Week 2 
+*Oct. 1*
+
+- Drop-in lab
+
+*Oct. 3*
+
 - Project management
+
 - How R thinks about data
  
-#### Week 3 (Oct. 10)
+#### Week 3 
+*Oct. 8*
+
+- Drop-in lab
+
+*Oct. 10*
+
 - Spreadsheet best practices
+
 - Starting with spreadsheets in R
 
-#### Week 4 (Oct. 17)
+#### Week 4 
+*Oct. 15*
+
+- Drop-in lab
+
+*Oct. 17*
+
 - Data manipulation in the tidyverse, part 1
 
-#### Week 5 (Oct. 24)
+#### Week 5 
+*Oct. 22*
+
+- Drop-in lab
+
+*Oct. 24*
+
 - Data manipulation in the tidyverse, part 2
 
-#### Week 6 (Oct. 31)
+#### Week 6 
+*Oct. 29*
+
+- Midterm (during drop-in lab)
+
+*Oct. 31*
+
 - Data visualization, part 1
 
-#### Week 7 (Nov. 7)
+#### Week 7 
+*Nov. 5*
+
+- Drop-in lab
+
+*Nov. 7*
+
 - Data visualization, part 2  
 
-#### Week 8 (Nov. 14) 
+#### Week 8 
+*Nov. 12*
+
+- Drop-in lab
+
+*Nov. 14 *
+
 - Date-time data with `lubridate`
+
 - Writing functions
 
-#### Week 9 (Nov. 21)
+#### Week 9 
+*Nov. 19*
+
+- Drop-in lab
+
+*Nov. 21*
+
 - Iteration 
 
 #### Thanksgiving holiday (Nov. 28)   
 
-#### Week 10 (Dec. 5)
+#### Week 10 
+*Dec. 3*
+
+- Drop-in lab
+
+*Dec. 5*
+
 - Collaborative Github Skills
 
-#### Finals (Dec. 12)
+#### Finals 
+*Dec. 10*
+
+- Drop-in lab
+
+*Dec. 12*
+
 - Final assignment (in class & mandatory)
 
 
