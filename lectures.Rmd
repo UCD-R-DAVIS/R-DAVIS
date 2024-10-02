@@ -16,9 +16,11 @@ Check out each week to see what you need to be doing before, during, and after c
 -   Catch up on a few videos from Week 1:
     -   [SSH keys](https://www.youtube.com/watch?v=MS3-1o6L4sM&list=PL3XKX2lto7M6OS7mNykfRWBtIdaOSz3sg&index=4)
 -   Videos for Week 2:
-    -   [Intro to R](https://www.youtube.com/watch?v=4ChzkjVg6Tg&list=PL3XKX2lto7M6OS7mNykfRWBtIdaOSz3sg&index=3)
+    -   [Why programming and Intro to R (part 1)](https://www.youtube.com/watch?v=4ChzkjVg6Tg&t=273s)
+    -   [Intro to R (part 2)](https://www.youtube.com/watch?v=J2nGg4gNzg0&feature=youtu.be)
+    -   [Project Management](https://www.youtube.com/watch?v=mwzV9XFQ6JQ)
     -   [How R thinks about data (vectors)](https://www.youtube.com/watch?v=Pmfl0oA1qVk&list=PL3XKX2lto7M6OS7mNykfRWBtIdaOSz3sg&index=1)
-    -   [How R thinks about data (subsetting](https://www.youtube.com/watch?v=sYu-gE5FlPw&list=PL3XKX2lto7M6OS7mNykfRWBtIdaOSz3sg&index=2))
+    -   [How R thinks about data (subsetting)](https://www.youtube.com/watch?v=sYu-gE5FlPw&list=PL3XKX2lto7M6OS7mNykfRWBtIdaOSz3sg&index=2)
 
 <b>After class:</b>
 
