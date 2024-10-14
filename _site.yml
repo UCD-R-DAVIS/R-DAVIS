@@ -45,7 +45,7 @@ navbar:
       href: lesson_rmarkdown.html
   - text: Videos
     icon: fa-slideshare fa-1x
-    href: lectures.html
+    href: videos.html
   - text: Assignments
     icon: fa-paperclip fa-1x
     href: assignments.html

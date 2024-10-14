@@ -47,8 +47,8 @@ Check out each week to see what you need to be doing before, during, and after c
 
 -   Complete the Week 3 homework in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
 -   Videos for Week 4:
-    -   Data manipulation Part 1a
-    -   Data manipulation Part 1b
+    -   [Data manipulation Part 1a](https://www.youtube.com/watch?v=fG4WxnBO7yc&feature=youtu.be)
+    -   [Data manipulation Part 1b](https://www.youtube.com/watch?v=nZncBG74_d8)
 
 <!------
   * [Data manipulation Part 1a](https://www.youtube.com/watch?v=f0OCEG-0ExI&list=PL9RGU7mcuUv6hlpNiICK6Q1NYnBsf-RYk&index=2)
