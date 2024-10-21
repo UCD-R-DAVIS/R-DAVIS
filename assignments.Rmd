@@ -5,20 +5,20 @@ output:
     toc: false
 ---
 
-Assignments are designed to reinforce the code/lessons covered that week and provide you a chance to practice working with GitHub. Assignments are to be completed in your local project (on your computer) and pushed up to your GitHub repository for instructors to review by the following Wednesday. For example, homework for Week 1 (which is on September 22) should be submitted by September 28. That said, these due dates are largely suggestive as a way to help you prioritize and stay caught up as a group -- if you need, or want, more time, take it. At the end of the quarter, we will simply look over the tasks you have completed in concert with the reflection you submit.
+Assignments are designed to reinforce the code/lessons covered that week and provide you a chance to practice working with GitHub. Assignments are to be completed in your local project (on your computer) and pushed up to your GitHub repository for instructors to review by the following Wednesday. That said, these due dates are largely suggestive as a way to help you prioritize and stay caught up as a group -- if you need, or want, more time, take it. At the end of the quarter, we will simply look over the tasks you have completed in concert with the reflection you submit.
 
 
 <br>
 
 ## Assignments {.tabset .tabset-fade .tabset-pills}
 
-### <small>Week 1</small>
+### <small>Assignment 1</small>
 <br>
 Because this class caters to a range of experiences, we would like you to identify how it is you plan on earning credit for this course. Before next week, please complete [this form](https://docs.google.com/forms/d/1aGHZra8ucJb_vKVgj75PwCDnzt9Viw5gnoVK-Qm8bZk) to select and describe your plans.
 
-### <small>Week 2</small>
+### <small>Assignment 2</small>
 
-In Week 2's homework we are going to practice subsetting and manipulating vectors.  
+In this homework we are going to practice subsetting and manipulating vectors.  
 
 First, open your r-davis-in-class-project-YourName and `pull`. Remember, we always want to start working on a github project by pulling, even if we are sure nothing has changed (believe me, this small step will save you lots of headaches).
 
@@ -76,7 +76,7 @@ final <- plus10[c(TRUE, FALSE)] #selecting every other number using logical subs
 </details>
 
 
-### <small>Week 3</small>
+### <small>Assignment 3</small>
 
 Homework this week will be playing with the `surveys` data we worked on in class. First things first, open your r-davis-in-class-project and pull. Then create a new script in your `scripts` folder called `week_3_homework.R`. 
 
@@ -115,7 +115,7 @@ challenge_base <- surveys_base[surveys_base[, 2]>150,] #selecting just the weigh
 
 <br> 
 
-### <small>Week 4</small>
+### <small>Assignment 4</small>
 
 By now you should be in the rhythm of pulling from your git repository and then creating new homework script. This week the homework will review data manipulation in the tidyverse.
 
@@ -189,7 +189,7 @@ surveys_avg_weight
 ```
 </details>
 
-### <small>Week 5</small>
+### <small>Assignment 5</small>
 
 This week's questions will have us practicing pivots and conditional statements.
 
@@ -253,7 +253,7 @@ surveys %>%
 ```
 </details>
 
-### <small>Week 6</small>
+### <small>Assignment 6</small>
 
 For our week six homework, we are going to be practicing the skills we learned with ggplot during class. You will be happy to know that we are going to be using a brand new data set called `gapminder`. This data set is looking at statistics for a few different counties including population, GDP per capita, and life expectancy. Download the data using the code below. Remember, this code is looking for a folder called `data` to put the .csv in, so make sure you have a folder named `data`, or modify the code to the correct folder name. 
 
@@ -335,7 +335,7 @@ gapminder %>%
 </details>
 
 
-### <small>Week 7</small>
+### <small>Assignment 7</small>
 
 For week 7, we're going to be working on 2 critical `ggplot` skills: recreating a graph from a dataset and **googling stuff**.
 
@@ -417,7 +417,7 @@ pg %>%
 ```
 </details>
 
-### <small>Week 8</small>
+### <small>Assignment 8</small>
 
 Let's look at some real data from Mauna Loa to try to format and plot. These meteorological data from Mauna Loa were collected every minute for the year 2001. *This dataset has 459,769 observations for 9 different metrics of wind, humidity, barometric pressure, air temperature, and precipitation.* Download this dataset [here](data/mauna_loa_met_2001_minute.rda). Save it to your `data/` folder. Alternatively, you can read the CSV directly from the R-DAVIS Github:
 `mloa <- read_csv("https://raw.githubusercontent.com/gge-ucd/R-DAVIS/master/data/mauna_loa_met_2001_minute.csv")`
