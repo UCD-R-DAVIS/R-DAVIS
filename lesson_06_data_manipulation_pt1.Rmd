@@ -109,7 +109,7 @@ To choose **rows** based on a specific criteria, use `filter()`:
 filter(surveys, year == 1995)
 ```
 
-`select` is used for **rows** and `filter` is used for **columns**.
+`filter` is used for **rows** and `select` is used for **columns**.
 
 ## Pipes
 
