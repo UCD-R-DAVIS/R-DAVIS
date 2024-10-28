@@ -82,12 +82,14 @@ Check out each week to see what you need to be doing before, during, and after c
 
 <b>Before class:</b>
 
--   Complete the Week 5 homework in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
+-   Complete the Assignment #5 in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
+
+-   Complete the Midterm in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html) (will be released 10/29 by 4 pm)
 
 -   Videos for Week 6:
 
-    -   Data visualization Part 1a
-    -   Data visualization Part 1b
+    -   [Data visualization Part 1a](https://www.youtube.com/watch?v=ptqBbZAwZ-E)
+    -   [Data visualization Part 1b](https://www.youtube.com/watch?v=V-bk4lbdQMU)
 
 <b>After class:</b>
 
@@ -97,7 +99,7 @@ Check out each week to see what you need to be doing before, during, and after c
 
 <b>Before class:</b>
 
--   Complete the Week 6 homework in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
+-   Complete the Assignment #6 in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
 -   Videos for Week 7:
     -   Data visualization Part 2a
     -   Data visualization Part 2b
@@ -116,7 +118,7 @@ Check out each week to see what you need to be doing before, during, and after c
 
 <b>Before class:</b>
 
--   Complete the Week 7 homework in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
+-   Complete the Assignment #7 in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
 -   Videos for Week 8:
     -   Dates with Lubridate
     -   Function-writing
@@ -136,7 +138,7 @@ Check out each week to see what you need to be doing before, during, and after c
 
 <b>Before class:</b>
 
--   Complete the Week 8 homework in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
+-   Complete the Assignment #8 in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
 -   Videos for Week 9: 2022 videos cancelled
 -   2021 videos:
     -   For loops
