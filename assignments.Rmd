@@ -263,7 +263,7 @@ BACKGROUND: The pandemic spurred Tyler to get back into running semi-seriously. 
 
 TASK DESCRIPTION: 
 
-1. Read in the file tyler_activity_laps_10-24.csv from the class github page. This file is at url `https://raw.githubusercontent.com/ucd-cepb/R-DAVIS/refs/heads/main/data/tyler_activity_laps_10-24.csv`, so you can code that url value as a string object in R (hint: you will need to put the url in quotes) and call read_csv() on that object. The file is a .csv file where each row is a "lap" from an activity Tyler tracked with his watch. 
+1. Read in the file tyler_activity_laps_10-24.csv from the class github page. This file is at url `https://raw.githubusercontent.com/ucd-cepb/R-DAVIS/refs/heads/main/data/tyler_activity_laps_10-24.csv`, so you can code that url value as a string object in R and call read_csv() on that object. The file is a .csv file where each row is a "lap" from an activity Tyler tracked with his watch. 
 
 2. Filter out any non-running activities. 
 
