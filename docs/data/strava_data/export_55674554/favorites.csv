@@ -1,0 +1,3 @@
+Follower Athlete ID,Following Athlete ID,Favorite Status
+55780652,55674554,"{:BOOST_ACTIVITIES_IN_FEED=>""Boost Activities in Feed"", :NOTIFY_ACTIVITIES=>""Subscribed to Activity Notifications on Upload"", :MUTE_IN_FEED=>""Muted Activities in Feed""}"
+55674554,55780652,"{:BOOST_ACTIVITIES_IN_FEED=>""Boost Activities in Feed"", :NOTIFY_ACTIVITIES=>""Subscribed to Activity Notifications on Upload"", :MUTE_IN_FEED=>""Muted Activities in Feed""}"

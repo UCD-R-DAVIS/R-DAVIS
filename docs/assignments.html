@@ -13,7 +13,7 @@
 
 <title>Coding Practice</title>
 
-<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.26/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -394,12 +394,11 @@ $(document).ready(function () {
 week and provide you a chance to practice working with GitHub.
 Assignments are to be completed in your local project (on your computer)
 and pushed up to your GitHub repository for instructors to review by the
-following Wednesday. For example, homework for Week 1 (which is on
-September 22) should be submitted by September 28. That said, these due
-dates are largely suggestive as a way to help you prioritize and stay
-caught up as a group – if you need, or want, more time, take it. At the
-end of the quarter, we will simply look over the tasks you have
-completed in concert with the reflection you submit.</p>
+following Wednesday. That said, these due dates are largely suggestive
+as a way to help you prioritize and stay caught up as a group – if you
+need, or want, more time, take it. At the end of the quarter, we will
+simply look over the tasks you have completed in concert with the
+reflection you submit.</p>
 <p><br></p>
 <div id="assignments"
 class="section level2 tabset tabset-fade tabset-pills">
@@ -564,20 +563,20 @@ or not a row’s weight is above average for its species+sex combination
 the homework
 </summary>
 <pre class="r"><code>library(tidyverse)</code></pre>
-<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+<pre><code>## ── Attaching core tidyverse package
 ## ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ## ✔ forcats   1.0.0     ✔ stringr   1.5.1
 ## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
 ## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
 ## ✔ purrr     1.0.2     
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ── Conflicts ──────────────────────
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()
 ## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 <pre class="r"><code>#1
 surveys &lt;- read_csv(&quot;data/portal_data_joined.csv&quot;)</code></pre>
 <pre><code>## Rows: 34786 Columns: 13
-## ── Column specification ────────────────────────────────────────────────────────
+## ── Column specification ───────────
 ## Delimiter: &quot;,&quot;
 ## chr (6): species_id, sex, genus, species, taxa, plot_type
 ## dbl (7): record_id, month, day, year, plot_id, hindfoot_length, weight
@@ -607,8 +606,9 @@ biggest_critters &lt;- surveys %&gt;%
   filter(!is.na(weight)) %&gt;% 
   group_by(species_id, sex) %&gt;% 
   summarise(max_weight = max(weight))</code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;species_id&#39;. You can override using the
-## `.groups` argument.</code></pre>
+<pre><code>## `summarise()` has grouped output
+## by &#39;species_id&#39;. You can override
+## using the `.groups` argument.</code></pre>
 <pre class="r"><code>biggest_critters %&gt;% arrange(max_weight)</code></pre>
 <pre><code>## # A tibble: 64 × 3
 ## # Groups:   species_id [25]
@@ -783,7 +783,7 @@ the homework
 library(tidyverse)
 surveys &lt;- read_csv(&quot;data/portal_data_joined.csv&quot;)</code></pre>
 <pre><code>## Rows: 34786 Columns: 13
-## ── Column specification ────────────────────────────────────────────────────────
+## ── Column specification ───────────
 ## Delimiter: &quot;,&quot;
 ## chr (6): species_id, sex, genus, species, taxa, plot_type
 ## dbl (7): record_id, month, day, year, plot_id, hindfoot_length, weight
@@ -796,8 +796,9 @@ surveys &lt;- read_csv(&quot;data/portal_data_joined.csv&quot;)</code></pre>
   summarise(mean_hindfoot = mean(hindfoot_length)) %&gt;% 
   pivot_wider(names_from = plot_type, values_from = mean_hindfoot) %&gt;% 
   arrange(Control)</code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;genus&#39;. You can override using the
-## `.groups` argument.</code></pre>
+<pre><code>## `summarise()` has grouped output
+## by &#39;genus&#39;. You can override using
+## the `.groups` argument.</code></pre>
 <pre class="r"><code># 2
 summary(surveys$weight)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
@@ -900,6 +901,113 @@ surveys %&gt;%
 ## #   weight_cat &lt;chr&gt;</code></pre>
 </details>
 </div>
+<div id="midterm" class="section level3">
+<h3><small>Midterm </small></h3>
+<p>This is the midterm exam for R-DAVIS Fall 2024. THE MIDTERM IS NOT
+GRADED. This is strictly meant to be an assessment of your learning thus
+far. You are welcome to use whatever materials you’d like. The exam is
+meant to take 1 hour. When you are finished, save a .R script as
+midterm_[lastname]_[firstname] in your class git repository and push
+your script to github.</p>
+<p>BACKGROUND: The pandemic spurred Tyler to get back into running
+semi-seriously. That went pretty well until he hurt his Achilles tendon.
+The sports med doctors at UC Davis filmed and analyzed his running. The
+doctors said Tyler was getting old… and that he was over-striding and
+putting too much pressure on his Achilles when landing. So in 2024,
+Tyler has been practicing running differently. The doctors and trainers
+are having Tyler increase his cadence (strides per minute) while
+running, with the idea being that fast, short strides place less stress
+on the lower body. For this exam, you are going to read in data that
+Tyler has exported from his Garmin running watch and perform a
+descriptive analysis to assess how successful this effort has been.</p>
+<p>TASK DESCRIPTION:</p>
+<ol style="list-style-type: decimal">
+<li><p>Read in the file tyler_activity_laps_10-24.csv from the class
+github page. This file is at url
+<code>https://raw.githubusercontent.com/ucd-cepb/R-DAVIS/refs/heads/main/data/tyler_activity_laps_10-24.csv</code>,
+so you can code that url value as a string object in R (hint: you will
+need to put the url in quotes) and call read_csv() on that object. The
+file is a .csv file where each row is a “lap” from an activity Tyler
+tracked with his watch.</p></li>
+<li><p>Filter out any non-running activities.</p></li>
+<li><p>Next, Tyler often has to take walk breaks between laps right now
+because trying to change how you’ve run for 25 years is hard. You can
+assume that any lap with a pace above 10 minute-per-mile pace is
+walking, so remove those laps. You should also remove any abnormally
+fast laps (&lt; 5 minute-per-mile pace) and abnormally short records
+where the total elapsed time is one minute or less.</p></li>
+<li><p>Create a new categorical variable, pace, that categorizes laps by
+pace: “fast” (&lt; 6 minutes-per-mile), “medium” (6:00 to 8:00), and
+“slow” ( &gt; 8:00). Create a second categorical variable,
+<code>form</code> that distinguishes between laps run in the year 2024
+(“new”, as Tyler started his rehab in January 2024) and all prior years
+(“old”).</p></li>
+<li><p>Identify the average steps per minute for laps by form and pace,
+and generate a table showing these values with old and new as separate
+rows and pace categories as columns. Make sure that <code>slow</code>
+speed is the second column, <code>medium</code> speed is the third
+column, and <code>fast</code> speed is the fourth column (hint: think
+about what the <code>select()</code> function does).</p></li>
+<li><p>Finally, Tyler thinks he’s been doing better since July after the
+doctors filmed him running again and provided new advice. Summarize the
+minimum, mean, median, and maximum steps per minute results for all laps
+(regardless of pace category) run between January - June 2024 and July -
+October 2024 for comparison.</p></li>
+</ol>
+<details>
+<summary>
+<strong>DO NOT OPEN</strong> until you are ready to see the answers!
+</summary>
+<pre class="r"><code>library(tidyverse)
+url &lt;- &#39;https://raw.githubusercontent.com/ucd-cepb/R-DAVIS/refs/heads/main/data/tyler_activity_laps_10-24.csv&#39;
+lap_dt &lt;- read_csv(url)</code></pre>
+<pre><code>## Rows: 8985 Columns: 12
+## ── Column specification ───────────
+## Delimiter: &quot;,&quot;
+## chr   (1): sport
+## dbl  (10): year, month, day, total_distance_m, minutes_per_mile, total_elaps...
+## dttm  (1): timestamp
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code>running_laps &lt;- lap_dt %&gt;% 
+  filter(sport == &#39;running&#39;) %&gt;%
+  filter(total_elapsed_time_s &lt;= 60) %&gt;%
+  filter(minutes_per_mile &lt; 10 &amp; minutes_per_mile &gt; 5) %&gt;%
+  mutate(pace_cat = case_when(minutes_per_mile &lt; 6 ~ &#39;hard&#39;,
+                           minutes_per_mile &gt;=6 &amp; minutes_per_mile &lt; 8 ~ &#39;medium&#39;,
+                           T ~ &#39;easy&#39;),
+         form = case_when(year == 2024 ~ &#39;new form&#39;,
+                          T ~ &#39;old form&#39;))
+
+running_laps %&gt;% group_by(form,pace_cat) %&gt;% 
+  summarize(avg_spm = mean(steps_per_minute)) %&gt;%
+  pivot_wider(id_cols = form,values_from = avg_spm,names_from = pace_cat) %&gt;%
+  select(form,easy,medium,hard)</code></pre>
+<pre><code>## `summarise()` has grouped output
+## by &#39;form&#39;. You can override using
+## the `.groups` argument.</code></pre>
+<pre><code>## # A tibble: 2 × 4
+## # Groups:   form [2]
+##   form      easy medium  hard
+##   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1 new form  155.   162.  171 
+## 2 old form  146.   147.  160.</code></pre>
+<pre class="r"><code>running_laps %&gt;% filter(form == &#39;new form&#39;) %&gt;%
+  mutate(months = ifelse(month %in% 1:6,&#39;early 2024&#39;,&#39;late 2024&#39;)) %&gt;%
+  group_by(months) %&gt;% 
+  summarize(
+    min_spm = min(steps_per_minute),
+    median_spm = median(steps_per_minute),
+    mean_spm = mean(steps_per_minute),
+    max_spm = max(steps_per_minute))</code></pre>
+<pre><code>## # A tibble: 2 × 5
+##   months     min_spm median_spm mean_spm max_spm
+##   &lt;chr&gt;        &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;
+## 1 early 2024     120        156     151.     166
+## 2 late 2024      160        169     169.     174</code></pre>
+<details>
+</div>
 <div id="assignment-6" class="section level3">
 <h3><small>Assignment 6</small></h3>
 <p>For our week six homework, we are going to be practicing the skills
@@ -915,7 +1023,7 @@ to the correct folder name.</p>
 
 gapminder &lt;- read_csv(&quot;https://ucd-r-davis.github.io/R-DAVIS/data/gapminder.csv&quot;) #ONLY change the &quot;data&quot; part of this path if necessary</code></pre>
 <pre><code>## Rows: 1704 Columns: 6
-## ── Column specification ────────────────────────────────────────────────────────
+## ── Column specification ───────────
 ## Delimiter: &quot;,&quot;
 ## chr (2): country, continent
 ## dbl (4): year, pop, lifeExp, gdpPercap
@@ -942,8 +1050,9 @@ out and see what happens with or without particular elements.</p>
     scale_x_log10() +
     geom_smooth(method = &#39;lm&#39;, color = &#39;black&#39;, linetype = &#39;dashed&#39;) +
     theme_bw()</code></pre>
-<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
-<p><img src="assignments_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<pre><code>## `geom_smooth()` using formula = &#39;y
+## ~ x&#39;</code></pre>
+<p><img src="assignments_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>Create a boxplot that shows the life expectency for Brazil, China,
 El Salvador, Niger, and the United States, with the data points in the
@@ -965,9 +1074,10 @@ gapminder %&gt;%
   ggplot()+
   geom_point(aes(x = year, y = mean_lifeExp, color = continent))+ #scatter plot
   geom_line(aes(x = year, y = mean_lifeExp, color = continent)) #line plot</code></pre>
-<pre><code>## `summarise()` has grouped output by &#39;continent&#39;. You can override using the
-## `.groups` argument.</code></pre>
-<p><img src="assignments_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<pre><code>## `summarise()` has grouped output
+## by &#39;continent&#39;. You can override
+## using the `.groups` argument.</code></pre>
+<p><img src="assignments_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <pre class="r"><code>#there are other ways to represent this data and answer this question. Try a facet wrap! Play around with themes and ggplotly!  
 
 
@@ -980,8 +1090,9 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
     scale_x_log10() +
     geom_smooth(method = &#39;lm&#39;, color = &#39;black&#39;, linetype = &#39;dashed&#39;) +
     theme_bw()</code></pre>
-<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
-<p><img src="assignments_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
+<pre><code>## `geom_smooth()` using formula = &#39;y
+## ~ x&#39;</code></pre>
+<p><img src="assignments_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
 <pre class="r"><code>#PROBLEM 3: 
 
 countries &lt;- c(&quot;Brazil&quot;, &quot;China&quot;, &quot;El Salvador&quot;, &quot;Niger&quot;, &quot;United States&quot;) #create a vector with just the countries we are interested in
@@ -995,7 +1106,7 @@ gapminder %&gt;%
   ggtitle(&quot;Life Expectancy of Five Countries&quot;) + #title the figure
   theme(plot.title = element_text(hjust = 0.5)) + #centered the plot title
   xlab(&quot;Country&quot;) + ylab(&quot;Life Expectancy&quot;) #how to change axis names</code></pre>
-<img src="assignments_files/figure-html/unnamed-chunk-10-3.png" width="672" />
+<img src="assignments_files/figure-html/unnamed-chunk-11-3.png" width="672" />
 </details>
 </div>
 <div id="assignment-7" class="section level3">
@@ -1005,7 +1116,7 @@ gapminder %&gt;%
 <strong>googling stuff</strong>.</p>
 <p>Our goal will be to make this final graph using the
 <code>gapminder</code> dataset:</p>
-<p><img src="assignments_files/figure-html/unnamed-chunk-12-1.png" width="768" /></p>
+<p><img src="assignments_files/figure-html/unnamed-chunk-13-1.png" width="768" /></p>
 <p>The x axis labels are all scrunched up because we can’t make the
 image bigger on the webpage, but if you make it and then zoom it bigger
 in RStudio it looks much better.</p>
@@ -1167,11 +1278,12 @@ Hint: You may have to combine dataframes to answer some questions. Remember our 
 
 
 ```
-## Warning: Removed 1228 rows containing non-finite outside the scale range
+## Warning: Removed 1228 rows containing
+## non-finite outside the scale range
 ## (`stat_boxplot()`).
 ```
 
-<img src="assignments_files/figure-html/unnamed-chunk-15-1.png" width="672" />
+<img src="assignments_files/figure-html/unnamed-chunk-16-1.png" width="672" />
 
 --->
 </div>
