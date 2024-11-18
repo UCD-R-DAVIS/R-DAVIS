@@ -139,10 +139,9 @@ Check out each week to see what you need to be doing before, during, and after c
 <b>Before class:</b>
 
 -   Complete the Week 8 homework in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
--   Videos for Week 9: 2022 videos cancelled
--   2021 videos:
-    -   For loops
-    -   Map functions
+-   Videos for Week 9:
+    -   [For loops](https://www.youtube.com/watch?v=E6Nf93V9HNs)
+    -   [Map functions](https://www.youtube.com/watch?v=ECTw5wncxQo)
 
 ### Finals Week
 
