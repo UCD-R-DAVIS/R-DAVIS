@@ -99,7 +99,7 @@ Check out each week to see what you need to be doing before, during, and after c
 
 <b>Before class:</b>
 
--   Complete the Week 6 homework in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
+-   Complete Assignment #6 in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
 -   Videos for Week 7:
     -   [Data visualization Part 2a](https://youtu.be/pA1FnyhH4mw)
     -   [Data visualization Part 2b](https://youtu.be/cpilCyiGeT8)
@@ -119,11 +119,10 @@ Check out each week to see what you need to be doing before, during, and after c
 
 <b>Before class:</b>
 
--   Complete the Week 7 homework in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
+-   Complete the Assignment #7 in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
 -   Videos for Week 8:
-    -   Dates with Lubridate
-    -   Function-writing
-    -   Iteration
+    -   [Dates with Lubridate](https://www.youtube.com/watch?v=OtViTa0PILQ&feature=youtu.be)
+    -   [Function-writing](https://www.youtube.com/watch?v=zKLx0jXaFiU)
 
 <!------  
   * [Lubridate](https://www.youtube.com/watch?v=CVgeZf8Av0I&list=PL9RGU7mcuUv6hlpNiICK6Q1NYnBsf-RYk&index=2)
@@ -140,10 +139,9 @@ Check out each week to see what you need to be doing before, during, and after c
 <b>Before class:</b>
 
 -   Complete the Week 8 homework in the [Assignments tab](https://ucd-r-davis.github.io/R-DAVIS/assignments.html)
--   Videos for Week 9: 2022 videos cancelled
--   2021 videos:
-    -   For loops
-    -   Map functions
+-   Videos for Week 9:
+    -   [For loops](https://www.youtube.com/watch?v=E6Nf93V9HNs)
+    -   [Map functions](https://www.youtube.com/watch?v=ECTw5wncxQo)
 
 ### Finals Week
 
