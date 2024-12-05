@@ -585,6 +585,10 @@ surveys$genusspecies <- lapply(1:length(surveys$species), function(i){
 ```
 </details>
 
+### <small>Reflection</small> 
+
+-   Complete the [post-course credit reflection](https://docs.google.com/forms/d/e/1FAIpQLScR_AUTFx4Q9tL2QJumIEeOGdwFvyEsrqrZMXkwAqi2AzBFRw/viewform?usp=sharing)
+
 ### <small>Final assignment</small>  
 
 Forthcoming  

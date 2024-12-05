@@ -143,6 +143,3 @@ Check out each week to see what you need to be doing before, during, and after c
     -   [For loops](https://www.youtube.com/watch?v=E6Nf93V9HNs)
     -   [Map functions](https://www.youtube.com/watch?v=ECTw5wncxQo)
 
-### Finals Week
-
--   Complete the [post-course credit reflection](https://forms.gle/9Q4SHwqpHJoYkf9G7)
