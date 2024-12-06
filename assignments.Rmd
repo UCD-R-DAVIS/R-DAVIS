@@ -589,122 +589,68 @@ surveys$genusspecies <- lapply(1:length(surveys$species), function(i){
 
 -   Complete the [post-course credit reflection](https://docs.google.com/forms/d/e/1FAIpQLScR_AUTFx4Q9tL2QJumIEeOGdwFvyEsrqrZMXkwAqi2AzBFRw/viewform?usp=sharing)
 
-### <small>Final assignment</small>  
-
-Forthcoming  
 
 
+### <small>Final </small>
 
-<!-----
-Alright folks, it's time for the final assignment of the quarter. The goal here is to generate an script that combines the skills we've learned throughout the quarter to produce several outputs. 
-<br>
+This is the final exam for R-DAVIS Fall 2024. THE FINAL IS NOT GRADED. This is strictly meant to be an assessment of your learning thus far. You are welcome to use whatever materials you'd like. The exam is meant to take 1 hour. When you are finished, save a .R script as midterm_[lastname]_[firstname] in your class git repository and push your script to github.
 
+BACKGROUND: For the midterm, you compared Tyler's old running data with recent data to analyze to see if there was any difference in strides-per-minute (SPM). Tyler's reform project started in January, 2024. On July 1, 2024, Tyler went to a follow-up appointment with the UCD Sports Medicine clinic, and they told him that has cadence was still too low, and that his form was perhaps *more* damaging than it had been. The technician gave Tyler some training cues, as well as the advice that "elite professional runners are at least 180 strides-per-minute, so aim for that". 
 
-#### The Data
-For this project you are going to be using some data sets about flights departing New York City in 2013. There are **several** CSV files you will need to use (as with any CSVs you're handed, they are likely imperfect and incomplete).
-You should download the [flights](data/nyc_13_flights_small.csv), [planes](data/nyc_13_planes.csv), and [weather](data/nyc_13_weather.csv) CSV files. (Remember to put them into your data folder of your RProject to make reading them in easier!)
+Tyler looked into it, and found out that:
+#1 Tyler is not an elite professional runner
+#2 That 180 number was based on strides counted in the 1984 MEN'S OLYMPIC 10K FINAL (seriously this is true)
+given these two facts, the conclusion (since confirmed with technician) is that what really matters is not just high cadence but a positive relationship between cadence and speed. Perform the tasks below to analyze whether Tyler's SPM appears responsive to changes in pace, and more importantly whether things have improved since the July 1 check-up.
 
-Hint: You may have to combine dataframes to answer some questions. Remember our `join` family of functions? You should be able to use the `join` type we covered in class. The `flights` dataset is the biggest one, so you should probably join the other data onto this one, meaning `flights` would be the first (of "left") argument in the left join. You can't join 3 tables together at once, but you can join tables `a` and `b` to make table `ab`, then join `ab` and `c` to get table `abc` which contains the columns from all 3 original tables.
+TASK DESCRIPTION: 
 
-#### Things to Include
-1. Plot the departure delay of flights against the precipitation, and include a simple regression line as part of the plot. Hint: there is a `geom_` that will plot a simple `y ~ x` regression line for you, but you might have to use an argument to make sure it's a regular **l**inear **m**odel. Use `ggsave` to save your ggplot objects into a **new folder** you create called "plots".
-2. Create a figure that has date on the x axis and each day's mean departure delay on the y axis. Plot only months September through December. Somehow distinguish between airline carriers (the method is up to you). Again, save your final product into the "plot" folder.
-3. Create a dataframe with these columns: date (year, month and day), mean_temp, where each row represents the airport, based on airport code. Save this is a new csv into you `data` folder called `mean_temp_by_origin.csv`.
-4. Make a function that can: (1) convert hours to minutes; and (2) convert minutes to hours (i.e., it's going to require some sort of conditional setting in the function that determines which direction the conversion is going). Use this function to convert departure delay (currently in minutes) to hours and then generate a boxplot of departure delay times by carrier. Save this function into a script called "customFunctions.R" in your scripts/code folder.
-5. Below is the plot we generated from the new data in Q4. (Base code: 
-`ggplot(df, aes(x = dep_delay_hrs, y = carrier, fill = carrier)) +
-  geom_boxplot()`). The goal is to visualize delays by carrier. Do (at least) 5 things to improve this plot by changing, adding, or subtracting to this plot. The sky's the limit here, remember we often reduce data to more succinctly communicate things.
+1. Read in the file tyler_activity_laps_12-6.csv from the class github page. This file is at url `https://raw.githubusercontent.com/UCD-R-DAVIS/R-DAVIS/refs/heads/main/data/tyler_activity_laps_12-6.csv`, so you can code that url value as a string object in R and call read_csv() on that object. The file is a .csv file where each row is a "lap" from an activity Tyler tracked with his watch. 
 
+2. Filter out any non-running activities. 
 
-```{r answer key, echo = F, results = 'hide', message = F, warning = F, fig.show='hide'}
+3. We are interested in *normal* running. You can assume that any lap with a pace above 10 `minutes_per_mile` pace is walking, so remove those laps. You should also remove any abnormally fast laps (< 5 `minute_per_mile` pace) and abnormally short records where the total elapsed time is one minute or less. 
+
+4. Group observations into three time periods corresponding to pre-2024 running, Tyler's initial rehab efforts from January to June of this year, and activities from July to the present. 
+
+5. Make a scatter plot that graphs SPM over speed by lap.
+
+6. Make 5 aesthetic changes to the plot to improve the visual. 
+
+7. Add trendlines to the plot to show the relationship between speed and SPM for each of the three time periods (hint: you might want to check out geom_smooth)
+
+8. Does this relationship maintain or break down as Tyler gets tired? Make a plot (of your choosing) that shows SPM vs. speed by *lap*. Note that because you removed Tyler's walk breaks, the lap numbers are slightly off. To recode, arrange 
+
+<details>
+<summary>**DO NOT OPEN** until you are ready to see the answers! </summary>
+```{r, eval = T}
 library(tidyverse)
-#flight <- read.csv("data/nyc_13_flights.csv") 
-#flight <- flight[sample(1:nrow(flight), size = 50000),]
-#write.csv(flight, "data/nyc_13_flights_small.csv", row.names = F)
+url <- 'https://raw.githubusercontent.com/UCD-R-DAVIS/R-DAVIS/refs/heads/main/data/tyler_activity_laps_12-6.csv'
+lap_dt <- read_csv(url)
 
-flight <- read.csv("data/nyc_13_flights_small.csv")
-planes <- read.csv("data/nyc_13_planes.csv")
-weather <- read.csv("data/nyc_13_weather.csv")
+running_laps <- lap_dt %>% 
+  filter(sport == 'running') %>%
+  filter(total_elapsed_time_s >= 60) %>%
+  filter(minutes_per_mile < 10 & minutes_per_mile > 5) %>%
+        mutate(form = case_when(year < 2024 ~ 'pre-2024',
+                          month < 7 & year == 2024 ~ 'early-2024',
+                          T ~ 'late-2024'))
 
-intersect(colnames(flight), colnames(planes))
-intersect(colnames(flight), colnames(weather))
-
-df <- flight %>% 
-  left_join(planes) %>% 
-  left_join(weather)
-
-#Plot the departure delay of flights against the precipitation, and include a simple regression line as part of the plot
-colnames(df)
-max(df$dep_delay, na.rm = T)
-df %>% 
-  filter(dep_delay > 0) %>% 
-  ggplot(aes(x = precip, y = dep_delay)) +
-  geom_point() +
-  geom_smooth(method = "lm")
-
-# Create a figure that has date on the x axis and mean departure delay on the y axis. Plot only months September through December. Somehow distinguish between airline carriers (the method is up to you). 
-library(lubridate)
-
-df %>% 
-  filter(dep_delay > 0) %>% 
-  filter(month %in% c(9:12)) %>% 
-  mutate(date = ymd(paste(year, month, day, sep = "-"))) %>% 
-  mutate(mean_dep_delay = mean(dep_delay, na.rm = T)) %>% 
-  unique() %>% 
-  ggplot(aes(x = date, y = mean_dep_delay)) + 
-  geom_point() +
-  facet_wrap(~carrier)
-  
-# Create a dataframe with the average temperature by month at each origin airport, where the data is wide (i.e. every airport has a column)
-df %>% 
-  group_by(month, origin) %>% 
-  summarize(mean_temp = mean(temp, na.rm = T)) %>% 
-  pivot_wider(names_from = origin, values_from = mean_temp)
-
-#4. Make a function that can: (1) convert hours to minutes; and (2) convert minutes to hours (i.e., it's going to require some sort of conditional setting in the function that determines which direction the conversion is going); use this function to convert departure delay (currently in minutes) to hours.
-
-min2hr <- function(hr = NULL, min = NULL, from_unit = NULL){
-if (from_unit == "minute"){
-  hour = min/60
-  print(hour)
-} else if (from_unit == "hour"){
-  minute = hr*60
-  print(minute)
-  }
-}
-
-min2hr(min = 760, from_unit = "minute")
-min2hr(hr = 7, from_unit = "hour")
-# or
-min2hr <- function(hr = NULL, min = NULL, from_unit = NULL){
-  ifelse(from_unit == "minute", min/60, hr*60)
-}
-# or
-min2hr <- function(x = NULL, from_unit = NULL){
-  ifelse(from_unit == "minute", x/60, x*60)
-}
-
-min2hr(760, from_unit = "minute")
-min2hr(7, from_unit = "hour")
-
-df$dep_delay_hrs <- NA
-for(i in 1:nrow(df)){
-  df$dep_delay_hrs[i] <- min2hr(df$dep_delay[i], from_unit = "minute")
-}
-# or
-df$dep_delay_hrs <- map(df$dep_delay, ~ min2hr(.x, from_unit = "minute"))
-
-## OR JUST TO SHOW A COOL FUNCTION
-vec_min2hr <- Vectorize(min2hr,'x')
-df <- df %>% mutate(dep_delay_hrs = vec_min2hr(dep_delay,from_unit = 'minute'))
+ggplot(running_laps) + 
+  geom_point(aes(y = steps_per_minute,x = minutes_per_mile))
 
 
+running_laps %>% group_by(form,pace_cat) %>% 
+  summarize(avg_spm = mean(steps_per_minute)) %>%
+  pivot_wider(id_cols = form,values_from = avg_spm,names_from = pace_cat) %>%
+  select(form,slow,medium,fast)
+
+running_laps %>% filter(form == 'new form') %>%
+  mutate(months = ifelse(month %in% 1:6,'early 2024','late 2024')) %>%
+  group_by(months) %>% 
+  summarize(
+    min_spm = min(steps_per_minute),
+    median_spm = median(steps_per_minute),
+    mean_spm = mean(steps_per_minute),
+    max_spm = max(steps_per_minute))
 ```
-
-```{r, echo = F}
-df %>% 
-  ggplot(aes(x = dep_delay_hrs, y = carrier, fill = carrier)) +
-  geom_boxplot()
-```
-
---->
+<details>
