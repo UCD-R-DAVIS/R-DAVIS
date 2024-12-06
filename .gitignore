@@ -4,3 +4,6 @@
 .Ruserdata
 .DS_Store
 data/strava_data/*
+data/strava_data2/*
+*.fit
+*.gz

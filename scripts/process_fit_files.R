@@ -4,7 +4,7 @@ if(!requireNamespace("remotes")) {
 remotes::install_github("grimbough/FITfileR")
 library(R.utils)
 
-floc <- 'data/strava_data/export_55674554/activities/'
+floc <- 'data/strava_data2/activities/'
 
 gz_files <- list.files(floc,pattern = 'gz$')
 
@@ -51,4 +51,4 @@ lap_dt <- lap_dt %>% select(sport,year,month,day,timestamp,
                   total_distance_m,minutes_per_mile,total_elapsed_time_s,
                   avg_heart_rate_bpm,steps_per_minute,total_ascent_m,total_descent_m)
 
-write_csv(lap_dt,file = 'data/tyler_activity_laps_10-24.csv')
+write_csv(lap_dt,file = 'data/tyler_activity_laps_12-6.csv')
