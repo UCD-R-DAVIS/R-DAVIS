@@ -50,5 +50,5 @@ setnames(lap_dt,'enhanced_avg_speed','enhanced_avg_speed_mps')
 lap_dt <- lap_dt %>% select(sport,year,month,day,timestamp,
                   total_distance_m,minutes_per_mile,total_elapsed_time_s,
                   avg_heart_rate_bpm,steps_per_minute,total_ascent_m,total_descent_m)
-
+lap_dt <- lap_dt |> filter(sport != 'running' | steps_per_minute > 50)
 write_csv(lap_dt,file = 'data/tyler_activity_laps_12-6.csv')
