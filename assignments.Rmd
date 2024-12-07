@@ -593,7 +593,7 @@ surveys$genusspecies <- lapply(1:length(surveys$species), function(i){
 
 ### <small>Final </small>
 
-This is the final exam for R-DAVIS Fall 2024. THE FINAL IS NOT GRADED. This is strictly meant to be an assessment of your learning thus far. You are welcome to use whatever materials you'd like. The exam is meant to take 1 hour. When you are finished, save a .R script as midterm_[lastname]_[firstname] in your class git repository and push your script to github.
+This is the final exam for R-DAVIS Fall 2024. THE FINAL IS NOT GRADED. This is strictly meant to be an assessment of your learning thus far. You are welcome to use whatever materials you'd like. The exam is meant to take 1 hour. When you are finished, save a .R script as final_[lastname]_[firstname] in your class git repository and push your script to github.
 
 BACKGROUND: For the midterm, you compared Tyler's old running data with recent data to analyze to see if there was any difference in strides-per-minute (SPM). On July 1, 2024, Tyler went to a follow-up appointment with the UCD Sports Medicine clinic, and they told him that has cadence was still too low, and that his form was perhaps *more* damaging than it had been. The technician gave Tyler some training cues, as well as the advice that "elite professional runners are at least 180 strides-per-minute, so aim for that". 
 
