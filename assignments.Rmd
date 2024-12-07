@@ -661,4 +661,4 @@ ggplot(data = late2024_laps,aes(x=minutes_per_mile,y = steps_per_minute,colour =
   theme_bw() +
   theme(legend.position = c(0.8,0.2))
 ```
-<details>
+</details>
