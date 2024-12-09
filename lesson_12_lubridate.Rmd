@@ -4,6 +4,14 @@ subtitle: Working with datetimes and `lubridate`
 minutes: 30
 ---
 
+# Add a package check/install code block after the YAML header.
+
+```{r setup, include=FALSE, echo=FALSE, results='hide'}
+# List of all required packages across assignments
+required_packages <- c(
+  "lubridate"
+)
+```
 
 <br>
 <div class = "blue">

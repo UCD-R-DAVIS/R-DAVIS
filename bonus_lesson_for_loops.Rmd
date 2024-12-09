@@ -2,6 +2,14 @@
 title: "Automation with for loops"
 ---
 
+```{r, include = FALSE,echo=FALSE,message=FALSE}
+# Check if required packages are installed, install if needed
+required_packages <- c("gapminder")
+new_packages <- required_packages[!(required_packages %in% installed.packages()[,"Package"])]
+if(length(new_packages)) install.packages(new_packages,repos = "http://cran.us.r-project.org")
+```
+
+
 > ## Learning objectives
 >
 > - Understand the anatomy of a for loop

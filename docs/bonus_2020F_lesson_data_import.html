@@ -515,7 +515,7 @@ and <code>read_csv</code></p>
 
 surveys_underscore &lt;- read_csv(&quot;data/combined.csv&quot;)</code></pre>
 <pre><code>## Rows: 34786 Columns: 13
-## ── Column specification ───────────
+## ── Column specification ────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr (6): species_id, sex, genus, species, taxa, plot_type
 ## dbl (7): record_id, month, day, year, plot_id, hindfoot_length, weight
@@ -672,7 +672,7 @@ rodents2001 &lt;- surveys %&gt;% filter(year &gt; 2000 &amp; taxa == &quot;Roden
 
 rodents2001 %&gt;% ggplot()+
         geom_point(aes(x=hindfoot_length, y = weight, color = sex))</code></pre>
-<p><img src="bonus_2020F_lesson_data_import_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<p><img src="bonus_2020F_lesson_data_import_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 <code>ggsave</code> allows us to easily save this plot. First, let’s
 create a new folder in this project called <code>figures</code>. Let’s
 save all the figures we create to that folder. <code>ggsave</code> will
@@ -727,11 +727,11 @@ packages</li>
 <h2><code>rio</code> Package</h2>
 <p>One other data import/export package to check out is called
 <code>rio</code>. It uses two main functions: <code>import</code> and
-<code>export</code>, and it automatically detects the file extension
-you’re using, then picks the fastest function out of a bunch of
-different specialized packages. It can streamline your data
-import/export and give you more consistent data frames when you’re
-working with lots of different file types.</p>
+<code>export</code>, and it automatically detects the file extension you
+are using, then picks the fastest function out of a bunch of different
+specialized packages. It can streamline your data import/export and give
+you more consistent data frames when you’re working with lots of
+different file types.</p>
 <pre class="r"><code>#install.packages(&quot;rio&quot;)
 library(rio)</code></pre>
 <pre><code>## Warning: package &#39;rio&#39; was built under R version 4.4.1</code></pre>

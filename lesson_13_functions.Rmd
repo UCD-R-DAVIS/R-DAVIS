@@ -2,6 +2,21 @@
 title: "Creating functions"
 ---
 
+# Add a package check/install code block after the YAML header.
+
+```{r setup, include=FALSE, echo=FALSE, results='hide'}
+# List of all required packages across assignments
+required_packages <- c(
+  "tidyverse",     # Used throughout for data manipulation and plotting
+  "lubridate",     # Assignment 8 - date/time handling
+  "viridis",       # Assignment 7 - color scales
+  "purrr",         # Assignment 9 - iteration and mapping
+  "ggplot2",       # Used throughout for plotting (part of tidyverse but sometimes loaded separately)
+  "dplyr",         # Used throughout for data manipulation (part of tidyverse but sometimes loaded separately)
+  "readr"          # Used throughout for data import (part of tidyverse but sometimes loaded separately)
+)
+```
+
 <div class = "blue">
 
 ### Learning objectives

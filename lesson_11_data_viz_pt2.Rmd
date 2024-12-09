@@ -2,6 +2,30 @@
 title: Data visualization best practices for publication and accessibility
 ---
 
+# Add a package check/install code block after the YAML header.
+
+```{r setup, include=FALSE, echo=FALSE, results='hide'}
+# List of all required packages across assignments
+required_packages <- c(
+  "ggplot2",       # Used throughout for plotting (part of tidyverse but sometimes loaded separately)
+  "cowplot",       # Used throughout for plotting (part of tidyverse but sometimes loaded separately)
+  "plotly",        # Used throughout for plotting (part of tidyverse but sometimes loaded separately)
+  "tidyverse",     # Used throughout for data manipulation and plotting
+  "viridis",       # For colorblind-friendly color palettes
+  "RColorBrewer",  # For additional color palettes
+  "sonify",        # For sound-based data visualization
+  "seewave" ,
+  "BrailleR"       # For sound wave visualization and analysis
+)
+
+# Check if required packages are installed, install if needed
+new_packages <- required_packages[!(required_packages %in% installed.packages()[,"Package"])]
+if(length(new_packages)) install.packages(new_packages, repos = "http://cran.us.r-project.org")
+
+# Load all required packages
+invisible(lapply(required_packages, library, character.only = TRUE))
+```
+
 <br>
 <div class = "blue">
 ## Learning Objectives

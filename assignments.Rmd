@@ -5,6 +5,30 @@ output:
     toc: false
 ---
 
+```{r setup, include=FALSE, echo=FALSE, results='hide'}
+# List of all required packages across assignments
+required_packages <- c(
+  "tidyverse",     # Used throughout for data manipulation and plotting
+  "lubridate",     # Assignment 8 - date/time handling
+  "viridis",       # Assignment 7 - color scales
+  "purrr",         # Assignment 9 - iteration and mapping
+  "ggplot2",       # Used throughout for plotting (part of tidyverse but sometimes loaded separately)
+  "dplyr",         # Used throughout for data manipulation (part of tidyverse but sometimes loaded separately)
+  "readr"          # Used throughout for data import (part of tidyverse but sometimes loaded separately)
+)
+
+# Check which packages need to be installed
+new_packages <- required_packages[!(required_packages %in% installed.packages()[,"Package"])]
+
+# Install missing packages
+if(length(new_packages)) {
+  install.packages(new_packages)
+}
+
+# Load all required packages
+invisible(lapply(required_packages, library, character.only = TRUE))
+```
+
 Assignments are designed to reinforce the code/lessons covered that week and provide you a chance to practice working with GitHub. Assignments are to be completed in your local project (on your computer) and pushed up to your GitHub repository for instructors to review by the following Wednesday. That said, these due dates are largely suggestive as a way to help you prioritize and stay caught up as a group -- if you need, or want, more time, take it. At the end of the quarter, we will simply look over the tasks you have completed in concert with the reflection you submit.
 
 

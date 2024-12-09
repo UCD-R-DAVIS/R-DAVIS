@@ -2,6 +2,7 @@
 title: Data visualization with ggplot2
 ---
 
+
 ```{r setup, echo=FALSE, purl=FALSE, message=F, results=F, warning = FALSE}
 library(tidyverse)
 surveys_complete <- read_csv("data/portal_data_joined.csv") %>% 

@@ -12,6 +12,16 @@ title: "Data Import and Export"
 
 <br>
 
+
+
+```{r, include = FALSE,echo=FALSE,message=FALSE}
+# Check if required packages are installed, install if needed
+required_packages <- c("tidyverse", "rio",'googlesheets4')
+new_packages <- required_packages[!(required_packages %in% installed.packages()[,"Package"])]
+if(length(new_packages)) install.packages(new_packages,repos = "http://cran.us.r-project.org")
+```
+
+
 ```{r, include = FALSE}
 library(tidyverse)
 ```
@@ -228,7 +238,7 @@ ggsave("figures/rodent2.png", rodent_plot, width = 4, height = 3, units = "in", 
  
 ## `rio` Package
 
-One other data import/export package to check out is called `rio`. It uses two main functions: `import` and `export`, and it automatically detects the file extension you're using, then picks the fastest function out of a bunch of different specialized packages. It can streamline your data import/export and give you more consistent data frames when you're working with lots of different file types.
+One other data import/export package to check out is called `rio`. It uses two main functions: `import` and `export`, and it automatically detects the file extension you are using, then picks the fastest function out of a bunch of different specialized packages. It can streamline your data import/export and give you more consistent data frames when you're working with lots of different file types.
 
 ```{r}
 #install.packages("rio")
